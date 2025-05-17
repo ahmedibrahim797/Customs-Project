@@ -1,0 +1,17 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="regression suite">
+    <test name="regression test">
+        <groups>
+            <run>
+                <include name="regression"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="Tests.TC01_LoginPage"/>
+            <class name="Tests.TC02_HomePage"/>
+            <class name="Tests.TC03_CartPage"/>
+            <class name="Tests.TC04_CheckoutPage"/>
+            <class name="Tests.TC05_finishingOrderPage"/>
+        </classes>
+    </test>
+</suite>

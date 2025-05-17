@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Smoke suite">
+    <listeners>
+        <listener class-name="TestListener.TestListener"/>
+    </listeners>
+    <test name="Smoke suite on chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="Tests.TC02_HomePage">
+                <methods>
+                    <include name="testValidRegister"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,31 @@
+[INFO] 07-04-2025 18:32:48 [main] [testBase.BaseTest.setUp(BaseTest.java:32)] - chrome browser is opened
+[INFO] 07-04-2025 18:32:49 [main] [TestListener.TestListener.onTestStart(TestListener.java:16)] - Test Case : validLoginTC Started
+[INFO] 07-04-2025 18:32:49 [main] [Tests.TC01_LoginPage.validLoginTC(TC01_LoginPage.java:36)] - User Name : standard_user
+[INFO] 07-04-2025 18:32:49 [main] [Tests.TC01_LoginPage.validLoginTC(TC01_LoginPage.java:38)] - Password : secret_sauce
+[INFO] 07-04-2025 18:32:50 [main] [Tests.TC01_LoginPage.validLoginTC(TC01_LoginPage.java:41)] - The login successfully
+[INFO] 07-04-2025 18:32:50 [main] [TestListener.TestListener.onTestSuccess(TestListener.java:20)] - Test Case : validLoginTC Passed
+[INFO] 07-04-2025 18:32:50 [main] [TestListener.TestListener.onTestStart(TestListener.java:16)] - Test Case : compareSelectedRandomProductWithNumOfCartIcon Started
+[INFO] 07-04-2025 18:32:50 [main] [Pages.P02_homePage.addRandomProduct(P02_homePage.java:63)] - The Random Number is : 1
+[INFO] 07-04-2025 18:32:50 [main] [Pages.P02_homePage.addRandomProduct(P02_homePage.java:63)] - The Random Number is : 3
+[INFO] 07-04-2025 18:32:50 [main] [Pages.P02_homePage.addRandomProduct(P02_homePage.java:63)] - The Random Number is : 4
+[INFO] 07-04-2025 18:32:50 [main] [Pages.P02_homePage.getNumOfProductOnIcon(P02_homePage.java:39)] - The Number of product in icon : 3
+[INFO] 07-04-2025 18:32:50 [main] [Pages.P02_homePage.getNumOfSelectedProducts(P02_homePage.java:50)] - The Number of selected product : 3
+[INFO] 07-04-2025 18:32:50 [main] [TestListener.TestListener.onTestSuccess(TestListener.java:20)] - Test Case : compareSelectedRandomProductWithNumOfCartIcon Passed
+[INFO] 07-04-2025 18:32:50 [main] [TestListener.TestListener.onTestStart(TestListener.java:16)] - Test Case : verifyCartPageUrl Started
+[INFO] 07-04-2025 18:32:51 [main] [Pages.P02_homePage.getTotalPrice(P02_homePage.java:81)] - Total Price : 95.97
+[INFO] 07-04-2025 18:32:51 [main] [TestListener.TestListener.onTestSuccess(TestListener.java:20)] - Test Case : verifyCartPageUrl Passed
+[INFO] 07-04-2025 18:32:51 [main] [TestListener.TestListener.onTestStart(TestListener.java:16)] - Test Case : verifyPriceOfProductsAddedToCart Started
+[INFO] 07-04-2025 18:32:51 [main] [Pages.P03_cartPage.getTotalPriceOnCart(P03_cartPage.java:36)] - Total Price : 95.97
+[INFO] 07-04-2025 18:32:51 [main] [TestListener.TestListener.onTestSuccess(TestListener.java:20)] - Test Case : verifyPriceOfProductsAddedToCart Passed
+[INFO] 07-04-2025 18:32:51 [main] [TestListener.TestListener.onTestStart(TestListener.java:16)] - Test Case : verifyCheckoutPageUrl Started
+[INFO] 07-04-2025 18:32:52 [main] [Tests.TC04_CheckoutPage.verifyCheckoutPageUrl(TC04_CheckoutPage.java:38)] - ahmed
+[INFO] 07-04-2025 18:32:52 [main] [Tests.TC04_CheckoutPage.verifyCheckoutPageUrl(TC04_CheckoutPage.java:39)] - mohamed
+[INFO] 07-04-2025 18:32:52 [main] [Tests.TC04_CheckoutPage.verifyCheckoutPageUrl(TC04_CheckoutPage.java:40)] - 1122
+[INFO] 07-04-2025 18:32:52 [main] [Tests.TC04_CheckoutPage.verifyCheckoutPageUrl(TC04_CheckoutPage.java:42)] - https://www.saucedemo.com/v1/checkout-step-two.html
+[INFO] 07-04-2025 18:32:52 [main] [TestListener.TestListener.onTestSuccess(TestListener.java:20)] - Test Case : verifyCheckoutPageUrl Passed
+[INFO] 07-04-2025 18:32:52 [main] [TestListener.TestListener.onTestStart(TestListener.java:16)] - Test Case : comparePrices Started
+[INFO] 07-04-2025 18:32:52 [main] [Pages.P05_overviewPage.calculateTotalPrices(P05_overviewPage.java:29)] - The Calculated Total Price Is : 103.65
+[INFO] 07-04-2025 18:32:52 [main] [Pages.P05_overviewPage.getTotal(P05_overviewPage.java:25)] - The Actual Total : 103.65
+[INFO] 07-04-2025 18:32:52 [main] [TestListener.TestListener.onTestSuccess(TestListener.java:20)] - Test Case : comparePrices Passed
+[INFO] 07-04-2025 18:32:52 [main] [TestListener.TestListener.onTestStart(TestListener.java:16)] - Test Case : finishOrderTest Started
+[INFO] 07-04-2025 18:32:53 [main] [TestListener.TestListener.onTestSuccess(TestListener.java:20)] - Test Case : finishOrderTest Passed
