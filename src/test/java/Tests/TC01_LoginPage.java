@@ -27,7 +27,7 @@ public class TC01_LoginPage extends BaseTest {
     @Link(name ="Website Url",url ="https://www.saucedemo.com/v1/index.html")
     @Epic("Sprint 1")
     @Feature("Login")
-    @Story("Valid Login")
+    @Story("Valid Login 1")
     @Test(priority = 1,groups = {"regression"})
     public void validLoginTC() throws IOException {
 
