@@ -24,7 +24,7 @@ public class utilityClass {
     //TODO:Click on element
     public static void clickOnElement(WebDriver driver , By locator){
 
-        new WebDriverWait(driver , Duration.ofSeconds(5))
+        new WebDriverWait(driver , Duration.ofSeconds(10))
                 .until(ExpectedConditions.elementToBeClickable(locator));
         driver.findElement(locator).click();
     }

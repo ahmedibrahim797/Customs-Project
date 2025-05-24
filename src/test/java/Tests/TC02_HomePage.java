@@ -37,9 +37,10 @@ public class TC02_HomePage extends BaseTest {
     @Feature("Cart")
     @Story("Add to Cart")
     @Test(priority = 2,groups = {"regression"})
-    public void compareSelectedRandomProductWithNumOfCartIcon() throws FileNotFoundException {
+    public void compareSelectedRandomProductWithNumOfCartIcon() throws FileNotFoundException, InterruptedException {
 
         homePageOP = new P02_homePage(driver);
+        Thread.sleep(5000);
         homePageOP.addRandomProduct(3,6);
         Assert.assertTrue(homePageOP.assertNumberOfSelectedProductWithCartIcon());
 
