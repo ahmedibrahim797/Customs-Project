@@ -63,7 +63,7 @@ public class P02_homePage {
             logUnit.info("The Random Number is : "+i);
             By addToCartBTNforAllProducts2 = By.xpath("(//button[contains(@class,'btn_inventory')])["+i+"]");
             utilityClass.clickOnElement(driver,addToCartBTNforAllProducts2);
-            System.out.println("click");
+            System.out.println("click 1");
         }
     }
     public void clickOnCartIcon(){
