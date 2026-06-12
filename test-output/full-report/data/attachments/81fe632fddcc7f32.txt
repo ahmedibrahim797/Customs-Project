@@ -1,0 +1,26 @@
+[INFO] - [10-06-2026 18:17:42] [main] [Portal.listeners.TestNGListeners] - Test Execution started
+[INFO] - [10-06-2026 18:17:42] [main] [Portal.FileUtils] - File deleted: D:\PomTest\test-output\Logs\logs.log
+[INFO] - [10-06-2026 18:17:42] [main] [Portal.listeners.TestNGListeners] - Directories cleaned
+[INFO] - [10-06-2026 18:17:42] [main] [Portal.FileUtils] - Directory created: test-output/screenshots/
+[INFO] - [10-06-2026 18:17:42] [main] [Portal.FileUtils] - Directory created: test-output/recordings/
+[INFO] - [10-06-2026 18:17:42] [main] [Portal.FileUtils] - Directory created: src/test/resources/downloads/
+[INFO] - [10-06-2026 18:17:42] [main] [Portal.listeners.TestNGListeners] - Directories created
+[INFO] - [10-06-2026 18:17:42] [main] [Portal.utils.dataReader.PropertyReader] - Properties file loaded successfully
+[INFO] - [10-06-2026 18:17:42] [main] [Portal.listeners.TestNGListeners] - Properties loaded
+[INFO] - [10-06-2026 18:17:42] [main] [Portal.utils.report.AllureEnvironmentManager] - Allure environment variables set.
+[INFO] - [10-06-2026 18:17:44] [main] [Portal.utils.report.AllureBinaryManager] - Allure binaries already exist.
+[INFO] - [10-06-2026 18:17:44] [main] [Portal.listeners.TestNGListeners] - Allure environment set
+[INFO] - [10-06-2026 18:17:44] [main] [Portal.drivers.GUIDriver] - Initializing GUIDriver with browser: Chrome
+[INFO] - [10-06-2026 18:17:44] [main] [Portal.drivers.GUIDriver] - Starting driver for browser: CHROME
+[INFO] - [10-06-2026 18:17:46] [main] [Portal.utils.action.BrowserActions] - Navigated to URL: http://192.168.2.44:30073
+[INFO] - [10-06-2026 18:17:47] [main] [com.automation.remarks.video.recorder.monte.MonteRecorder] - Recording started
+[INFO] - [10-06-2026 18:17:47] [main] [Portal.media.ScreenRecordManager] - Recording Started
+[INFO] - [10-06-2026 18:17:47] [main] [Portal.listeners.TestNGListeners] - Test Case validLoginTC started
+[INFO] - [10-06-2026 18:17:48] [main] [Portal.utils.action.BrowserActions] - Navigated to URL: http://192.168.2.44:30073/login
+[INFO] - [10-06-2026 18:18:00] [main] [Portal.utils.action.ElementActions] - Typed text 'standard_user' into element: By.xpath: //input[@id='username' and @name='username' and @type='text']
+[INFO] - [10-06-2026 18:18:02] [main] [Portal.utils.action.ElementActions] - Typed text 'secret_sauce' into element: By.cssSelector: #current-password
+[INFO] - [10-06-2026 18:18:22] [main] [com.automation.remarks.video.recorder.monte.MonteRecorder] - Recording finished to D:\PomTest\test-output\recordings\validLoginTC_recording_2026_10_06_18_18_22.avi
+[INFO] - [10-06-2026 18:18:22] [main] [Portal.media.ScreenRecordManager] - Video file saved at: D:\PomTest\test-output\recordings\validLoginTC_recording_2026_10_06_18_18_22.avi
+[INFO] - [10-06-2026 18:18:27] [main] [Portal.media.ScreenRecordManager] - Deleted original AVI file: validLoginTC_recording_2026_10_06_18_18_22.avi
+[INFO] - [10-06-2026 18:18:27] [main] [Portal.media.ScreenRecordManager] - Recording Stopped and Converted to MP4: validLoginTC_recording_2026_10_06_18_18_22.mp4
+[INFO] - [10-06-2026 18:18:28] [main] [Portal.media.ScreenshotsManager] - Capturing Screenshot Succeeded
