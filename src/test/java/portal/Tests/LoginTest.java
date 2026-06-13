@@ -1,7 +1,6 @@
 package portal.Tests;
 
 
-import Portal.Pages.SignupLoginPage;
 import Portal.Pages.components.NavigationBarComponent;
 import Portal.drivers.GUIDriver;
 import Portal.drivers.UITest;
@@ -23,17 +22,22 @@ public class LoginTest extends BaseTest {
 
     String timestamp = TimeManager.getSimpleTimestamp();
 
+
     @Description("Verify user can login with valid credentials")
     @Test
     public void validLoginTC() throws InterruptedException {
 
         System.out.println("start");
 
-        new SignupLoginPage(driver).navigate()
+        new NavigationBarComponent(driver).navigate()
+                .clickOnLoginBTN()
+                .assertLoginPageUrl()
                 .enterUsername(testData.getJsonData("username"))
-                .enterLoginPassword(testData.getJsonData("password"));
+                .enterLoginPassword(testData.getJsonData("password"))
+                .clickOnLoginBTN()
+                .assertLoginSuccess();
 
-        Thread.sleep(20000);
+
     }
 
 
@@ -52,6 +56,6 @@ public class LoginTest extends BaseTest {
 
     @AfterMethod
     public void tearDown() {
-        //driver.quitDriver();
+        driver.quitDriver();
     }
 }

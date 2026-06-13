@@ -5,6 +5,7 @@ import Portal.utils.WaitManager;
 import Portal.utils.logs.LogsManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
@@ -46,42 +47,20 @@ public class ElementActions {
 
     //Typing
     public ElementActions type(By locator, String text) throws InterruptedException {
-
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        waitManager.fluentWait().until(d ->
-                {
-
-                    try {
-                        System.out.println(locator);
-                        WebElement element = d.findElement(locator);
-                        JavascriptExecutor js = (JavascriptExecutor) driver;
-
-                        js.executeScript(
-                                "arguments[0].style.position='fixed';" +
-                                        "arguments[0].style.top='100px';" +
-                                        "arguments[0].style.left='100px';" +
-                                        "arguments[0].style.width='200px';" +
-                                        "arguments[0].style.height='30px';" +
-                                        "arguments[0].style.opacity='1';",
-                                element
-                        );
-                        System.out.println(locator);
-                        scrollToElementJS(locator);
-                        element.clear();
-                        element.sendKeys(text);
-                        LogsManager.info("Typed text '" + text + "' into element: " + locator);
-                        return true;
-
-                    } catch (Exception e) {
-                        return false;
-                    }
-
-                }
-        );
+        waitManager.fluentWait().until(d -> {
+            try {
+                WebElement element = d.findElement(locator);
+                scrollToElementJS(locator);
+                element.click();
+                element.sendKeys(Keys.CONTROL + "a");
+                element.sendKeys(Keys.DELETE);
+                element.sendKeys(text);
+                LogsManager.info("Typed text '" + text + "' into element: " + locator);
+                return true;
+            } catch (Exception e) {
+                return false;
+            }
+        });
         return this;
     }
 

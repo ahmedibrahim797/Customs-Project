@@ -18,8 +18,9 @@ public class WaitManager {
     public FluentWait<WebDriver> fluentWait() {
         return new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(Long.parseLong(PropertyReader.getProperty("DEFAULT_WAIT"))))
-                .pollingEvery(Duration.ofMillis(100));
-        //  .ignoreAll(getExceptions());
+                .pollingEvery(Duration.ofMillis(100))
+                .ignoreAll(getExceptions());
+
 
     }
 

@@ -4,6 +4,7 @@ package Portal.validation;
 import Portal.FileUtils;
 import Portal.utils.WaitManager;
 import Portal.utils.action.ElementActions;
+import Portal.utils.logs.LogsManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
@@ -50,6 +51,7 @@ public abstract class BaseAssertion {
     public void assertPageUrl(String expectedUrl) {
         String actualUrl = driver.getCurrentUrl();
         assertEquals(actualUrl, expectedUrl, "URL does not match. Expected: " + expectedUrl + ", Actual: " + actualUrl);
+        LogsManager.info("The Current URL :  " + driver.getCurrentUrl());
     }
 
     // verify page title
