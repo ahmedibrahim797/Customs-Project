@@ -12,11 +12,11 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-@Epic("Automation Exercise")
-@Feature("UI User Management")
+@Epic("Customs Project")
+@Feature("PAM")
 @Story("User Login")
 @Severity(SeverityLevel.CRITICAL)
-@Owner("Ashraf")
+@Owner("Ahmed Elnems")
 @UITest
 public class LoginTest extends BaseTest {
 
