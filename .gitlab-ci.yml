@@ -1,0 +1,124 @@
+﻿# ============================================================
+#  GitLab CI/CD Pipeline - Customs Portal Automation Suite
+#  Triggers: push to main / master
+#  Runner:   GitLab Shared Runners (Docker)
+#  Browser:  Chrome (headless)
+#  Suite:    src/TestRunner/Groups.xml
+# ============================================================
+
+# Global image - Maven + Java
+image: maven:3.9-eclipse-temurin-21
+
+# Pipeline triggers - only main/master
+workflow:
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main" || $CI_COMMIT_BRANCH == "master"'
+      when: always
+    - when: never
+
+# Shared Maven cache to speed up dependency downloads
+cache:
+  key: "$CI_PROJECT_ID-maven"
+  paths:
+    - .m2/repository
+
+# Stages
+stages:
+  - build
+  - test
+  - report
+
+# Variables
+variables:
+  MAVEN_OPTS: "-Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository -Xmx1024m"
+  MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end"
+  SUITE_FILE: "src/TestRunner/Groups.xml"
+
+# ============================================================
+#  STAGE 1 - BUILD
+#  Compile the project and make sure there are no build errors
+# ============================================================
+compile:
+  stage: build
+  script:
+    - echo "Compiling the project..."
+    - mvn $MAVEN_CLI_OPTS compile -DskipTests
+  artifacts:
+    paths:
+      - test-output/target/
+    expire_in: 1 hour
+
+# ============================================================
+#  STAGE 2 - TEST
+#  Install Chrome, run Groups.xml via maven-surefire + TestNG
+# ============================================================
+run-tests:
+  stage: test
+  image: selenium/standalone-chrome:latest
+  entrypoint: [""]
+  before_script:
+    - echo "Installing Java and Maven inside Selenium image..."
+    - apt-get update -qq && apt-get install -y -qq openjdk-21-jdk maven > /dev/null
+    - java -version
+    - mvn -version
+    - echo "Chrome version:"
+    - google-chrome --version
+    - echo "ChromeDriver version:"
+    - chromedriver --version
+  script:
+    - echo "Running TestNG suite - $SUITE_FILE"
+    - |
+      mvn $MAVEN_CLI_OPTS test \
+        -DsuiteXmlFile="$SUITE_FILE" \
+        -Dwebdriver.chrome.driver=$(which chromedriver) \
+        -Dheadless=true \
+        -Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository
+  after_script:
+    - echo "Test run completed. Collecting artifacts..."
+  artifacts:
+    when: always
+    paths:
+      - test-output/
+      - target/surefire-reports/
+      - allure-results/
+    reports:
+      junit: target/surefire-reports/TEST-*.xml
+    expire_in: 7 days
+  allow_failure: false
+
+# ============================================================
+#  STAGE 3 - REPORT
+#  Generate Allure HTML report
+# ============================================================
+generate-allure-report:
+  stage: report
+  when: always
+  dependencies:
+    - run-tests
+  script:
+    - echo "Generating Allure Report..."
+    - mvn $MAVEN_CLI_OPTS allure:report -Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository
+    - echo "Allure report generated at allure-report/"
+  artifacts:
+    paths:
+      - allure-report/
+    expire_in: 30 days
+
+# ============================================================
+#  OPTIONAL - Publish Allure report as GitLab Pages
+#  Uncomment if GitLab Pages is enabled on your project
+# ============================================================
+# pages:
+#   stage: report
+#   when: always
+#   dependencies:
+#     - generate-allure-report
+#   script:
+#     - mkdir -p public
+#     - cp -r allure-report/* public/
+#   artifacts:
+#     paths:
+#       - public
+#   only:
+#     - main
+#     - master
