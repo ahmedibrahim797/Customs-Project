@@ -7,16 +7,15 @@ import Portal.drivers.UITest;
 import Portal.utils.TimeManager;
 import Portal.utils.dataReader.JsonReader;
 import io.qameta.allure.*;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-@Epic("Customs Project")
+@Epic("Account management")
 @Feature("PAM")
 @Story("User Login")
 @Severity(SeverityLevel.CRITICAL)
-@Owner("Ahmed Elnems")
+@Owner("Elnems")
 @UITest
 public class LoginTest extends BaseTest {
 
@@ -24,7 +23,7 @@ public class LoginTest extends BaseTest {
 
 
     @Description("Verify user can login with valid credentials")
-    @Test
+    @Test(groups = "authentication")
     public void validLoginTC() throws InterruptedException {
 
         System.out.println("start");
@@ -42,20 +41,16 @@ public class LoginTest extends BaseTest {
 
 
     //Configurations
-    @BeforeClass
+    @BeforeClass(alwaysRun = true)
     protected void preCondition() {
         testData = new JsonReader("login-data");
     }
 
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void setUp() {
         driver = new GUIDriver();
         new NavigationBarComponent(driver).navigate();
         //driver.browser().closeExtensionTab();
     }
 
-    @AfterMethod
-    public void tearDown() {
-        driver.quitDriver();
-    }
 }

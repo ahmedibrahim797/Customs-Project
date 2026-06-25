@@ -19,7 +19,7 @@ import java.io.File;
 
 public class TestNGListeners implements ISuiteListener, IExecutionListener, IInvokedMethodListener, ITestListener {
     public void onStart(ISuite suite) {
-        suite.getXmlSuite().setName("Automation Exercise");
+        suite.getXmlSuite().setName("Customs Project");
     }
 
     public void onExecutionStart() {

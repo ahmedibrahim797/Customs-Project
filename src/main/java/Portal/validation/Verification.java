@@ -14,7 +14,7 @@ public class Verification extends BaseAssertion {
     }
 
     @Override
-    protected void assertTrue(boolean condition, String message) {
+    public void assertTrue(boolean condition, String message) {
         Assert.assertTrue(condition, message);
     }
 

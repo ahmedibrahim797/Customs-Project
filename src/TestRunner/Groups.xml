@@ -1,17 +1,19 @@
-<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="regression suite">
-    <test name="regression test">
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Customs Portal - Full Cycle" verbose="1">
+
+    <test name="Manifest Creation Flow">
         <groups>
             <run>
-                <include name="regression"/>
+                <include name="authentication"/>
+                <include name="manifest"/>
             </run>
         </groups>
         <classes>
-            <class name="Tests.TC01_LoginPage"/>
-            <class name="Tests.TC02_HomePage"/>
-            <class name="Tests.TC03_CartPage"/>
-            <class name="Tests.TC04_CheckoutPage"/>
-            <class name="Tests.TC05_finishingOrderPage"/>
+            <class name="portal.Tests.LoginTest"/>
+            <class name="portal.Tests.ManifestTest"/>
+            <class name="portal.Tests.ValidateDuplicateManifestAPITest"/>
         </classes>
     </test>
+
 </suite>

@@ -1,0 +1,14 @@
+{
+  "arrivalPort": "الأسكندرية",
+  "vesselNumber": "68000119",
+  "transportation": "VENTO DI BORA",
+  "countryDeparture": "الجزائر",
+  "portDeparture": "اورن",
+  "expectedArrivalDay": "29",
+  "departureDay": "15",
+  "captainName": "أحمد محمد",
+  "voyageNumber": "701",
+  "mainWarehouse": "ساحة قسم سابع",
+  "numberOfPassengers": "10",
+  "notes": "ملاحظات تجريبية لاختبار إنشاء المنافيست"
+}

@@ -1,0 +1,21 @@
+{
+  "facility_created_for": "151515153",
+  "has_secondary_agents": "false",
+  "has_empty_containers": "false",
+  "has_passengers": "true",
+  "apa_vessel_visit_id": "68000119",
+  "transport_means_type": "14",
+  "manifest_type_id": "a0979e44-222b-4427-b76b-90ac167ff2e3",
+  "berth_no": "2",
+  "estimated_arrival_date": "2025-11-25 12:14:00",
+  "actual_departure_timestamp": "2025-11-25 12:14:00",
+  "transport_mean_arrival_timestamp": "2025-11-26 12:20:00",
+  "arrival_port": "180",
+  "departure_port": "6",
+  "captain_name": "محمد علي",
+  "vessel_country": "10",
+  "passenger_count": "100",
+  "main_warehouse": "7001836",
+  "notes": "jhjghfg",
+  "voyage_number": "5487"
+}

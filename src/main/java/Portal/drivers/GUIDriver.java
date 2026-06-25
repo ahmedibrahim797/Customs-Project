@@ -9,6 +9,7 @@ import Portal.utils.dataReader.PropertyReader;
 import Portal.utils.logs.LogsManager;
 import Portal.validation.Validation;
 import Portal.validation.Verification;
+import Portal.utils.WaitManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ThreadGuard;
 
@@ -53,6 +54,10 @@ public class GUIDriver {
 
     public WebDriver get() {
         return driverThreadLocal.get();
+    }
+
+    public void hardWait(long milliseconds) {
+        new WaitManager(get()).hardWait(milliseconds);
     }
 
     public void quitDriver() {
