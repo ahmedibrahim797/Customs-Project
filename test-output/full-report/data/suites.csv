@@ -1,2 +1,4 @@
 "DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"Verify user can login with valid credentials","38001","validLoginTC","Automation Exercise","2026-06-13","passed","2026-06-13","portal.Tests.LoginTest","PomTest","portal.Tests.LoginTest","validLoginTC"
+"Verify user can login with valid credentials","123570","validLoginTC","Automation Exercise","2026-06-25","passed","2026-06-25","portal.Tests.LoginTest","Manifest Creation Flow","portal.Tests.LoginTest","validLoginTC"
+"Create a new manifest with valid data","68170","createManifestTC","Automation Exercise","2026-06-25","passed","2026-06-25","portal.Tests.ManifestTest","Manifest Creation Flow","portal.Tests.ManifestTest","createManifestTC"
+"Verify duplicate manifest returns 422 error","3923","validateDuplicateManifestTC","Automation Exercise","2026-06-25","passed","2026-06-25","portal.Tests.ValidateDuplicateManifestAPITest","Manifest Creation Flow","portal.Tests.ValidateDuplicateManifestAPITest","validateDuplicateManifestTC"

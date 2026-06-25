@@ -1,5 +1,6 @@
 package Portal.Pages.components;
 
+import Portal.Pages.CreateManifest;
 import Portal.Pages.SignupLoginPage;
 import Portal.drivers.GUIDriver;
 import Portal.utils.dataReader.PropertyReader;
@@ -11,6 +12,7 @@ public class NavigationBarComponent {
     //locators
 
     private final By loginBTN = By.cssSelector("flt-semantics[role='button'][flt-semantics-identifier='login']");
+    private final By customsServicesBTN = By.cssSelector("flt-semantics[role='button'][flt-semantics-identifier='menu_top_customsServices']");
 
     public NavigationBarComponent(GUIDriver driver) {
         this.driver = driver;
@@ -26,5 +28,11 @@ public class NavigationBarComponent {
     public SignupLoginPage clickOnLoginBTN() {
         driver.element().click(loginBTN);
         return new SignupLoginPage(driver);
+    }
+
+    @Step("Click on Custom Services button")
+    public CreateManifest clickOnCustomsServicesBTN() {
+        driver.element().click(customsServicesBTN);
+        return new CreateManifest(driver);
     }
 }

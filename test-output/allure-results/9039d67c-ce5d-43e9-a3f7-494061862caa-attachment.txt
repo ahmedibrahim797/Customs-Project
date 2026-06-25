@@ -1,0 +1,489 @@
+[INFO] - [25-06-2026 23:27:24] [main] [Portal.listeners.TestNGListeners] - Test Execution started
+[INFO] - [25-06-2026 23:27:24] [main] [Portal.FileUtils] - File deleted: D:\PomTest\test-output\Logs\logs.log
+[INFO] - [25-06-2026 23:27:24] [main] [Portal.listeners.TestNGListeners] - Directories cleaned
+[INFO] - [25-06-2026 23:27:24] [main] [Portal.FileUtils] - Directory created: test-output/screenshots/
+[INFO] - [25-06-2026 23:27:24] [main] [Portal.FileUtils] - Directory created: test-output/recordings/
+[INFO] - [25-06-2026 23:27:24] [main] [Portal.FileUtils] - Directory created: src/test/resources/downloads/
+[INFO] - [25-06-2026 23:27:24] [main] [Portal.listeners.TestNGListeners] - Directories created
+[INFO] - [25-06-2026 23:27:24] [main] [Portal.utils.dataReader.PropertyReader] - Properties file loaded successfully
+[INFO] - [25-06-2026 23:27:24] [main] [Portal.listeners.TestNGListeners] - Properties loaded
+[INFO] - [25-06-2026 23:27:24] [main] [Portal.utils.report.AllureEnvironmentManager] - Allure environment variables set.
+[INFO] - [25-06-2026 23:27:26] [main] [Portal.utils.report.AllureBinaryManager] - Allure binaries already exist.
+[INFO] - [25-06-2026 23:27:26] [main] [Portal.listeners.TestNGListeners] - Allure environment set
+[INFO] - [25-06-2026 23:27:26] [main] [Portal.drivers.GUIDriver] - Initializing GUIDriver with browser: Chrome
+[INFO] - [25-06-2026 23:27:26] [main] [Portal.drivers.GUIDriver] - Starting driver for browser: CHROME
+[INFO] - [25-06-2026 23:27:29] [main] [Portal.utils.action.BrowserActions] - Navigated to URL: http://192.168.2.44:30073
+[INFO] - [25-06-2026 23:27:30] [main] [com.automation.remarks.video.recorder.monte.MonteRecorder] - Recording started
+[INFO] - [25-06-2026 23:27:30] [main] [Portal.media.ScreenRecordManager] - Recording Started
+[INFO] - [25-06-2026 23:27:30] [main] [Portal.listeners.TestNGListeners] - Test Case validLoginTC started
+[INFO] - [25-06-2026 23:27:30] [main] [Portal.utils.action.BrowserActions] - Navigated to URL: http://192.168.2.44:30073
+[INFO] - [25-06-2026 23:27:32] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:27:34] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:27:36] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:27:39] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:27:41] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:27:43] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:27:45] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:27:47] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:27:49] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:27:51] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:27:53] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:27:55] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:27:57] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:27:59] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:02] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:04] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:06] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:08] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:10] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:13] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:15] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:17] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:19] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:21] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:23] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:25] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:27] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:29] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:32] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:34] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:36] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:38] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:40] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:42] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:44] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:46] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:49] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:51] [main] [Portal.utils.action.ElementActions] - Element not found yet, doing a gentle scroll...
+[INFO] - [25-06-2026 23:28:54] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[role='button'][flt-semantics-identifier='login']
+[INFO] - [25-06-2026 23:28:55] [main] [Portal.validation.BaseAssertion] - The Current URL :  http://192.168.2.44:30073/login
+[INFO] - [25-06-2026 23:28:57] [main] [Portal.utils.action.ElementActions] - Successfully typed text 'mog2806' into element: By.cssSelector: input[type='text'][aria-label*='اسم المستخدم']
+[INFO] - [25-06-2026 23:28:58] [main] [Portal.utils.action.ElementActions] - Successfully typed text 'P@ssw0rd' into element: By.cssSelector: input[type='password'][aria-label*='كلمة المرور']
+[INFO] - [25-06-2026 23:28:58] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[flt-semantics-identifier='login'][style*='z-index: 11']
+[INFO] - [25-06-2026 23:29:15] [main] [com.automation.remarks.video.recorder.monte.MonteRecorder] - Recording finished to D:\PomTest\test-output\recordings\validLoginTC_recording_2026_25_06_23_29_15.avi
+[INFO] - [25-06-2026 23:29:15] [main] [Portal.media.ScreenRecordManager] - Video file saved at: D:\PomTest\test-output\recordings\validLoginTC_recording_2026_25_06_23_29_15.avi
+[INFO] - [25-06-2026 23:29:32] [main] [Portal.media.ScreenRecordManager] - Deleted original AVI file: validLoginTC_recording_2026_25_06_23_29_15.avi
+[INFO] - [25-06-2026 23:29:32] [main] [Portal.media.ScreenRecordManager] - Recording Stopped and Converted to MP4: validLoginTC_recording_2026_25_06_23_29_15.mp4
+[INFO] - [25-06-2026 23:29:33] [main] [Portal.media.ScreenshotsManager] - Capturing Screenshot Succeeded
+[INFO] - [25-06-2026 23:29:33] [main] [Portal.listeners.TestNGListeners] - Test Case validLoginTC passed
+[INFO] - [25-06-2026 23:29:33] [main] [Portal.media.ScreenRecordManager] - Recording Started
+[INFO] - [25-06-2026 23:29:33] [main] [Portal.listeners.TestNGListeners] - Test Case createManifestTC started
+[INFO] - [25-06-2026 23:29:33] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[role='button'][flt-semantics-identifier='menu_top_customsServices']
+[INFO] - [25-06-2026 23:29:34] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[aria-label='manifest'] flt-semantics[flt-semantics-identifier='selectNow']
+[INFO] - [25-06-2026 23:29:34] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[flt-semantics-identifier='selectNow']
+[INFO] - [25-06-2026 23:29:35] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[flt-semantics-identifier='img_manual_insert_manifest'] flt-semantics[flt-semantics-identifier='selectNow']
+[INFO] - [25-06-2026 23:29:39] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[flt-semantics-identifier='manifestType'][role='group']
+[INFO] - [25-06-2026 23:29:40] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[flt-semantics-identifier='drop_item_incoming']
+[INFO] - [25-06-2026 23:29:41] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[flt-semantics-identifier='arrivalPort'][role='group']
+[INFO] - [25-06-2026 23:29:45] [main] [Portal.utils.action.ElementActions] - Successfully typed text 'الأسكندرية' into element: By.xpath: (//input[@type='text' and contains(@aria-label, 'البحث حسب الاسم أو الكود')])[last()]
+[INFO] - [25-06-2026 23:29:47] [main] [Portal.Pages.CreateManifest] - flt-semantics[flt-semantics-identifier='drop_item_الأسكندرية']
+[INFO] - [25-06-2026 23:29:47] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[flt-semantics-identifier='drop_item_الأسكندرية']
+[INFO] - [25-06-2026 23:29:47] [main] [Portal.utils.action.ElementActions] - فشل المحاولة رقم 1 والسبب هو: no such element: Unable to locate element: {"method":"css selector","selector":"input[type='text'][aria-label*='رقم التراكي']"}
+  (Session info: chrome=149.0.7827.103)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '26'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7ece832aed73b6c1f5ee209f0690a1d2, findElement {using=css selector, value=input[type='text'][aria-label*='رقم التراكي']}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\MEGAST~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57444}, goog:processID: 4348, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57444/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7ece832aed73b6c1f5ee209f0690a1d2
+[INFO] - [25-06-2026 23:29:47] [main] [Portal.utils.action.ElementActions] - فشل المحاولة رقم 2 والسبب هو: no such element: Unable to locate element: {"method":"css selector","selector":"input[type='text'][aria-label*='رقم التراكي']"}
+  (Session info: chrome=149.0.7827.103)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '26'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7ece832aed73b6c1f5ee209f0690a1d2, findElement {using=css selector, value=input[type='text'][aria-label*='رقم التراكي']}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\MEGAST~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57444}, goog:processID: 4348, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57444/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7ece832aed73b6c1f5ee209f0690a1d2
+[INFO] - [25-06-2026 23:29:47] [main] [Portal.utils.action.ElementActions] - فشل المحاولة رقم 3 والسبب هو: no such element: Unable to locate element: {"method":"css selector","selector":"input[type='text'][aria-label*='رقم التراكي']"}
+  (Session info: chrome=149.0.7827.103)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#nosuchelementexception
+Build info: version: '4.44.0', revision: 'da2039b'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '26'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [7ece832aed73b6c1f5ee209f0690a1d2, findElement {using=css selector, value=input[type='text'][aria-label*='رقم التراكي']}]
+Capabilities {acceptInsecureCerts: true, browserName: chrome, browserVersion: 149.0.7827.103, chrome: {chromedriverVersion: 149.0.7827.155 (07b52360cc1..., userDataDir: C:\Users\MEGAST~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:57444}, goog:processID: 4348, networkConnectionEnabled: false, pageLoadStrategy: eager, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:57444/devtoo..., se:cdpVersion: 149.0.7827.103, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 7ece832aed73b6c1f5ee209f0690a1d2
+[INFO] - [25-06-2026 23:29:47] [main] [Portal.utils.action.ElementActions] - Successfully typed text '68000119' into element: By.cssSelector: input[type='text'][aria-label*='رقم التراكي']
+[INFO] - [25-06-2026 23:29:48] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[role='button'][flt-semantics-identifier='next']
+[INFO] - [25-06-2026 23:29:49] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[aria-label='إسم وسيلة النقل'][role='group']
+[INFO] - [25-06-2026 23:29:53] [main] [Portal.utils.action.ElementActions] - Successfully typed text 'VENTO DI BORA' into element: By.xpath: (//input[@type='text' and contains(@aria-label, 'البحث حسب الاسم أو الكود')])[last()]
+[INFO] - [25-06-2026 23:29:55] [main] [Portal.Pages.CreateManifest] - flt-semantics[flt-semantics-identifier='drop_item_VENTO DI BORA']
+[INFO] - [25-06-2026 23:29:55] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[flt-semantics-identifier='drop_item_VENTO DI BORA']
+[INFO] - [25-06-2026 23:29:56] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[flt-semantics-identifier='departurePortCountry'][role='group']
+[INFO] - [25-06-2026 23:30:00] [main] [Portal.utils.action.ElementActions] - Successfully typed text 'الجزائر' into element: By.xpath: (//input[@type='text' and contains(@aria-label, 'البحث حسب الاسم أو الكود')])[last()]
+[INFO] - [25-06-2026 23:30:02] [main] [Portal.Pages.CreateManifest] - flt-semantics[flt-semantics-identifier='drop_item_الجزائر']
+[INFO] - [25-06-2026 23:30:02] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[flt-semantics-identifier='drop_item_الجزائر']
+[INFO] - [25-06-2026 23:30:03] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[flt-semantics-identifier='portDeparture'][role='group']
+[INFO] - [25-06-2026 23:30:07] [main] [Portal.utils.action.ElementActions] - Successfully typed text 'اورن' into element: By.xpath: (//input[@type='text' and contains(@aria-label, 'البحث حسب الاسم أو الكود')])[last()]
+[INFO] - [25-06-2026 23:30:09] [main] [Portal.Pages.CreateManifest] - flt-semantics[flt-semantics-identifier='drop_item_اورن']
+[INFO] - [25-06-2026 23:30:09] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[flt-semantics-identifier='drop_item_اورن']
+[INFO] - [25-06-2026 23:30:11] [main] [Portal.utils.action.ElementActions] - Clicked naturally using Actions on element: By.cssSelector: input[aria-label*='تاريخ الوصول المتوقع']
+[INFO] - [25-06-2026 23:30:12] [main] [Portal.Pages.CreateManifest] - //flt-semantics[starts-with(text(), '29, ')]
+[INFO] - [25-06-2026 23:30:12] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.xpath: //flt-semantics[starts-with(text(), '29, ')]
+[INFO] - [25-06-2026 23:30:13] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.xpath: (//flt-semantics[@role='button' and contains(text(), 'حسنًا')])[last()]
+[INFO] - [25-06-2026 23:30:14] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.xpath: (//flt-semantics[@role='button' and contains(text(), 'حسنًا')])[last()]
+[INFO] - [25-06-2026 23:30:14] [main] [Portal.utils.action.ElementActions] - Clicked naturally using Actions on element: By.cssSelector: input[type='text'][aria-label*='تاريخ المغادرة من دولة القدوم']
+[INFO] - [25-06-2026 23:30:15] [main] [Portal.Pages.CreateManifest] - //flt-semantics[starts-with(text(), '15, ')]
+[INFO] - [25-06-2026 23:30:16] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.xpath: //flt-semantics[starts-with(text(), '15, ')]
+[INFO] - [25-06-2026 23:30:17] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.xpath: (//flt-semantics[@role='button' and contains(text(), 'حسنًا')])[last()]
+[INFO] - [25-06-2026 23:30:18] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.xpath: (//flt-semantics[@role='button' and contains(text(), 'حسنًا')])[last()]
+[INFO] - [25-06-2026 23:30:18] [main] [Portal.utils.action.ElementActions] - Successfully typed text 'أحمد محمد' into element: By.cssSelector: input[type='text'][aria-label*='إسم الربان']
+[INFO] - [25-06-2026 23:30:19] [main] [Portal.utils.action.ElementActions] - Successfully typed text '701' into element: By.cssSelector: input[type='text'][aria-label*='رقم الرحلة']
+[INFO] - [25-06-2026 23:30:19] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[flt-semantics-identifier='mainWarehouse'][role='group']
+[INFO] - [25-06-2026 23:30:23] [main] [Portal.utils.action.ElementActions] - Successfully typed text 'ساحة قسم سابع' into element: By.xpath: (//input[@type='text' and contains(@aria-label, 'البحث حسب الاسم أو الكود')])[last()]
+[INFO] - [25-06-2026 23:30:25] [main] [Portal.Pages.CreateManifest] - flt-semantics[flt-semantics-identifier='drop_item_ساحة قسم سابع']
+[INFO] - [25-06-2026 23:30:25] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[flt-semantics-identifier='drop_item_ساحة قسم سابع']
+[INFO] - [25-06-2026 23:30:27] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.cssSelector: flt-semantics[flt-semantics-identifier='checkbox_havingPassengers']
+[INFO] - [25-06-2026 23:30:28] [main] [Portal.utils.action.ElementActions] - Successfully typed text '10' into element: By.cssSelector: input[type='text'][aria-label*='عدد الركاب']
+[INFO] - [25-06-2026 23:30:29] [main] [Portal.utils.action.ElementActions] - Successfully typed text 'ملاحظات تجريبية لاختبار إنشاء المنافيست' into element: By.cssSelector: textarea[aria-label*='الملاحظات']
+[INFO] - [25-06-2026 23:30:29] [main] [Portal.utils.action.ElementActions] - Clicked securely using JS on element: By.xpath: (//flt-semantics[@flt-semantics-identifier='next'])[last()]
+[INFO] - [25-06-2026 23:30:31] [main] [Portal.utils.action.ElementActions] - Retrieved text from element: By.cssSelector: flt-semantics[flt-semantics-identifier*='رقم المنافيست الخاص بك هو'] - Text: رقم المنافيست الخاص بك هو : 201/2026/000055 - وارد رقم المنافيست الخاص بك هو : 201/2026/000055 - وارد
+[INFO] - [25-06-2026 23:30:31] [main] [Portal.utils.action.ElementActions] - Retrieved text from element: By.cssSelector: flt-semantics[flt-semantics-identifier*='رقم المنافيست الخاص بك هو'] - Text: رقم المنافيست الخاص بك هو : 201/2026/000055 - وارد رقم المنافيست الخاص بك هو : 201/2026/000055 - وارد
+[INFO] - [25-06-2026 23:30:31] [main] [Portal.Pages.CreateManifest] - The Manifest Number is : 201/2026/000055
+[INFO] - [25-06-2026 23:30:31] [main] [Portal.media.ScreenRecordManager] - Video file saved at: D:\PomTest\test-output\recordings\createManifestTC_recording_2026_25_06_23_30_31.avi
+[INFO] - [25-06-2026 23:30:41] [main] [Portal.media.ScreenRecordManager] - Deleted original AVI file: createManifestTC_recording_2026_25_06_23_30_31.avi
+[INFO] - [25-06-2026 23:30:41] [main] [Portal.media.ScreenRecordManager] - Recording Stopped and Converted to MP4: createManifestTC_recording_2026_25_06_23_30_31.mp4
+[INFO] - [25-06-2026 23:30:41] [main] [Portal.media.ScreenshotsManager] - Capturing Screenshot Succeeded
+[INFO] - [25-06-2026 23:30:41] [main] [Portal.listeners.TestNGListeners] - Test Case createManifestTC passed
+[INFO] - [25-06-2026 23:30:41] [main] [Portal.listeners.TestNGListeners] - Test Case validateDuplicateManifestTC started
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.impl.conn.BasicClientConnectionManager] - Get connection for route {}->http://dev-manifest-in.local:80
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.impl.conn.DefaultClientConnectionOperator] - Connecting to dev-manifest-in.local:80
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.client.protocol.RequestAddCookies] - CookieSpec selected: ignoreCookies
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.client.protocol.RequestAuthCache] - Auth cache not set in the context
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.client.protocol.RequestProxyAuthentication] - Proxy auth state: UNCHALLENGED
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.impl.client.DefaultHttpClient] - Attempt 1 to execute request
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.impl.conn.DefaultClientConnection] - Sending request: POST /api/manifests HTTP/1.1
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "POST /api/manifests HTTP/1.1[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJETVhPYWgxdVlEenNGdFdBeHlaSnZvNjVIdkRsNHcxQSIsInN1YiI6IjlkNzg3ODI4LTc4Y2ItNGNiNy05NTg4LTlhNTUyZTc5ZGM2MiIsImlhdCI6MTc4MjQxODIwNC4zODc2NjMsInNjb3BlcyI6W10sImZhY2lsaXR5X2lkIjoiMTUxNTE1MTUzIiwidXNlcl9pZCI6IjlkNzg3ODI4LTc4Y2ItNGNiNy05NTg4LTlhNTUyZTc5ZGM2MiIsImp0aSI6IjdlODdmY2Q3NmUzYmNmYzNiNWM1MmE2NjRhMzY2NTgwMTMzZGI2MzA0NWYyNDgzNjg3MjI3MWY2MmZlZjVjZDE0YzNjODVhOTJjNjlkOGUwIiwiYXVkIjoiMSIsIm5iZiI6MTc4MjQxODIwNC4zODc3OTUsImV4cCI6MTgxMzk1NDIwNH0.IHrK9-IutnKxK2Cq1MhyCumGjEsl7epKnTGJF3DSdox6rM0BNNCeHEGFMgU5P-V3grXqC5azdHnuoxcHYiDxu79rbNKpiJ-4AN_jMJI1544KSHGzk4NKOgW7Z3zMxbQ8S6sRjM-gPv-fhvrialzYfwtFxsyLmVeBSK1vtCCH7G43WLAgmNkimRClnSKFh7PlrG-793hXQ-rftWCEmgMHzKfhQS-HgrCNTWWc0Tgbl5QCNF6qaGbA-0CFR3w6ESclLfdjimQkfVmev7vXfJkMd7hxcPkBRny142KLJk6aIdZx-aV3PtOKuGwsis2EVzjedjAPQnOOX1R13TSYwu4TqTqmEf5fHEebjPPWNW5aZLkqSIKe5yeA2pfrzkmDqEaCBlr-lnXMDzxEP5d3_9D8SSyOlQmTaIWHrv0Xnf5tDiTMDofePi2--vX0T7TRSwm1HLjBdfDMzQf4ZlHNXen_bQ7Jqd8CLdSQJCzy37nsKTUyi-ysCTFMsIZfkWjQ01bmgvPjNwTg1B3hz4tGnFEXbU4hKfFz7oiDiGrwMMY17TaDWYn1H_zQtJ72riRnlZ1oiyh8usOxnwS4YqcqtJaJ0fO8WZ3onqLkQuB45y6aOYQcEiVpDm0qbktKICJW9lQngdbY2Z4KbL6HNdpgcdrpI81S6UcbshvbSLBPXYJfeuA[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Accept: application/json[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Length: 2569[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type: multipart/form-data; boundary=XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Host: dev-manifest-in.local[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Connection: Keep-Alive[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "User-Agent: Apache-HttpClient/4.5.13 (Java/26)[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Accept-Encoding: gzip,deflate[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - >> POST /api/manifests HTTP/1.1
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - >> Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJETVhPYWgxdVlEenNGdFdBeHlaSnZvNjVIdkRsNHcxQSIsInN1YiI6IjlkNzg3ODI4LTc4Y2ItNGNiNy05NTg4LTlhNTUyZTc5ZGM2MiIsImlhdCI6MTc4MjQxODIwNC4zODc2NjMsInNjb3BlcyI6W10sImZhY2lsaXR5X2lkIjoiMTUxNTE1MTUzIiwidXNlcl9pZCI6IjlkNzg3ODI4LTc4Y2ItNGNiNy05NTg4LTlhNTUyZTc5ZGM2MiIsImp0aSI6IjdlODdmY2Q3NmUzYmNmYzNiNWM1MmE2NjRhMzY2NTgwMTMzZGI2MzA0NWYyNDgzNjg3MjI3MWY2MmZlZjVjZDE0YzNjODVhOTJjNjlkOGUwIiwiYXVkIjoiMSIsIm5iZiI6MTc4MjQxODIwNC4zODc3OTUsImV4cCI6MTgxMzk1NDIwNH0.IHrK9-IutnKxK2Cq1MhyCumGjEsl7epKnTGJF3DSdox6rM0BNNCeHEGFMgU5P-V3grXqC5azdHnuoxcHYiDxu79rbNKpiJ-4AN_jMJI1544KSHGzk4NKOgW7Z3zMxbQ8S6sRjM-gPv-fhvrialzYfwtFxsyLmVeBSK1vtCCH7G43WLAgmNkimRClnSKFh7PlrG-793hXQ-rftWCEmgMHzKfhQS-HgrCNTWWc0Tgbl5QCNF6qaGbA-0CFR3w6ESclLfdjimQkfVmev7vXfJkMd7hxcPkBRny142KLJk6aIdZx-aV3PtOKuGwsis2EVzjedjAPQnOOX1R13TSYwu4TqTqmEf5fHEebjPPWNW5aZLkqSIKe5yeA2pfrzkmDqEaCBlr-lnXMDzxEP5d3_9D8SSyOlQmTaIWHrv0Xnf5tDiTMDofePi2--vX0T7TRSwm1HLjBdfDMzQf4ZlHNXen_bQ7Jqd8CLdSQJCzy37nsKTUyi-ysCTFMsIZfkWjQ01bmgvPjNwTg1B3hz4tGnFEXbU4hKfFz7oiDiGrwMMY17TaDWYn1H_zQtJ72riRnlZ1oiyh8usOxnwS4YqcqtJaJ0fO8WZ3onqLkQuB45y6aOYQcEiVpDm0qbktKICJW9lQngdbY2Z4KbL6HNdpgcdrpI81S6UcbshvbSLBPXYJfeuA
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - >> Accept: application/json
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - >> Content-Length: 2569
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - >> Content-Type: multipart/form-data; boundary=XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - >> Host: dev-manifest-in.local
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - >> Connection: Keep-Alive
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - >> User-Agent: Apache-HttpClient/4.5.13 (Java/26)
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - >> Accept-Encoding: gzip,deflate
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="transport_mean_arrival_timestamp""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "2025-11-26 12:20:00"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="facility_created_for""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "151515153"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="notes""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "jhjghfg"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="captain_name""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "???? ???"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="estimated_arrival_date""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "2025-11-25 12:14:00"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="arrival_port""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "180"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="passenger_count""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "100"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="voyage_number""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "5487"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="actual_departure_timestamp""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "2025-11-25 12:14:00"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="departure_port""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "6"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="transport_means_type""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "14"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="manifest_type_id""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "a0979e44-222b-4427-b76b-90ac167ff2e3"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="has_empty_containers""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "false"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="apa_vessel_visit_id""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "68000119"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="has_passengers""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "true"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="vessel_country""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "10"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="berth_no""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "2"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="main_warehouse""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "7001836"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Disposition"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "form-data; name="has_secondary_agents""
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "Content-Type"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> ": "
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "text/plain"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "false"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "XkoHFs6-s3EvDgrLskEZ-m5zBbM5MGqAK"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "--"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  >> "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "HTTP/1.1 200 OK[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "Date: Thu, 25 Jun 2026 20:30:45 GMT[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "Content-Type: application/json[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "Transfer-Encoding: chunked[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "Connection: keep-alive[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "vary: Authorization[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "x-powered-by: PHP/8.3.24[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "cache-control: no-cache, private[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "access-control-allow-origin: *[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "access-control-allow-methods: GET, POST,PATCH, PUT, DELETE, OPTIONS[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "access-control-allow-headers: Origin, Content-Type, Authorization, X-Requested-With, X-Request-Id, Accept,X-Correlation-Id[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "x-envoy-upstream-service-time: 224[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "x-envoy-decorator-operation: manifiest-service.default.svc.cluster.local:8080/*[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.impl.conn.DefaultClientConnection] - Receiving response: HTTP/1.1 200 OK
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - << HTTP/1.1 200 OK
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - << Date: Thu, 25 Jun 2026 20:30:45 GMT
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - << Content-Type: application/json
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - << Transfer-Encoding: chunked
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - << Connection: keep-alive
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - << vary: Authorization
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - << x-powered-by: PHP/8.3.24
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - << cache-control: no-cache, private
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - << access-control-allow-origin: *
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - << access-control-allow-methods: GET, POST,PATCH, PUT, DELETE, OPTIONS
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - << access-control-allow-headers: Origin, Content-Type, Authorization, X-Requested-With, X-Request-Id, Accept,X-Correlation-Id
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - << x-envoy-upstream-service-time: 224
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.headers] - << x-envoy-decorator-operation: manifiest-service.default.svc.cluster.local:8080/*
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.impl.client.DefaultHttpClient] - Connection can be kept alive indefinitely
+[DEBUG] - [25-06-2026 23:30:44] [main] [io.restassured.internal.RestAssuredHttpBuilder] - Parsing response as: application/json
+[DEBUG] - [25-06-2026 23:30:44] [main] [io.restassured.internal.RestAssuredHttpBuilder] - Parsed data to instance of: class org.apache.http.conn.EofSensorInputStream
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "8a[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "{"status":500,"message":"Failed to create manifest: Manifest with the same vessel id, port, and manifest type already exists","data":null}"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "0[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.wire] -  << "[\r][\n]"
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.impl.conn.BasicClientConnectionManager] - Releasing connection org.apache.http.impl.conn.ManagedClientConnectionImpl@4005dc6b
+[DEBUG] - [25-06-2026 23:30:44] [main] [org.apache.http.impl.conn.BasicClientConnectionManager] - Connection can be kept alive indefinitely
+[INFO] - [25-06-2026 23:30:44] [main] [Portal.apis.ManifestAPI] - {
+    "status": 500,
+    "message": "Failed to create manifest: Manifest with the same vessel id, port, and manifest type already exists",
+    "data": null
+}

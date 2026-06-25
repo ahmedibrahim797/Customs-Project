@@ -1,0 +1,1 @@
+{"uuid":"dc55844f-e86e-4931-8001-2c9c06de3640","name":"portal.Tests.ManifestTest","children":["0b950af1-2479-407a-bb2a-5a009fad0595"],"befores":[{"name":"preCondition","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1782419373154,"stop":1782419373155}],"afters":[],"start":1782419246887,"stop":1782419445577}

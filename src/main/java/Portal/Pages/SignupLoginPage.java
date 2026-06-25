@@ -31,13 +31,15 @@ public class SignupLoginPage {
     }
 
     @Step("Enter name {username} in login field")
-    public SignupLoginPage enterUsername(String username) throws InterruptedException {
+    public SignupLoginPage enterUsername(String username) {
+        driver.hardWait(1000);
         driver.element().type(loginUsername, username);
         return this;
     }
 
     @Step("Enter password {password} in login field")
-    public SignupLoginPage enterLoginPassword(String password) throws InterruptedException {
+    public SignupLoginPage enterLoginPassword(String password) {
+        driver.hardWait(1000);
         driver.element().type(loginPassword, password);
         return this;
     }
@@ -50,6 +52,7 @@ public class SignupLoginPage {
 
     //validations
     public SignupLoginPage assertLoginPageUrl() {
+        driver.hardWait(1000);
         driver.validation().assertPageUrl(PropertyReader.getProperty("baseUrlWeb") + LoginEndpoint);
         return this;
     }

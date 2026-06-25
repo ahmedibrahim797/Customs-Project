@@ -1,0 +1,1 @@
+{"uuid":"e0512c55-f9e0-4486-8fbb-d6b01444a2a8","name":"portal.Tests.LoginTest","children":["983b0189-3b54-425c-95a8-220166af4b77"],"befores":[{"name":"preCondition","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1782419246953,"stop":1782419246973}],"afters":[],"start":1782419246887,"stop":1782419445576}

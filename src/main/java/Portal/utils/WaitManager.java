@@ -15,6 +15,16 @@ public class WaitManager {
         this.driver = driver;
     }
 
+    public void hardWait(long milliseconds) {
+        synchronized (this) {
+            try {
+                wait(milliseconds);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }
+    }
+
     public FluentWait<WebDriver> fluentWait() {
         return new FluentWait<>(driver)
                 .withTimeout(Duration.ofSeconds(Long.parseLong(PropertyReader.getProperty("DEFAULT_WAIT"))))

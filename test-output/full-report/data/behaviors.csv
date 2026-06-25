@@ -1,2 +1,4 @@
 "BROKEN","EPIC","FAILED","FEATURE","PASSED","SKIPPED","STORY","UNKNOWN"
-"0","Automation Exercise","0","UI User Management","1","0","User Login","0"
+"0","Account management","0","PAM","1","0","User Login","0"
+"0","Automation Exercise","0","Customs Services","1","0","Create Manifest","0"
+"0","Automation Exercise","0","Customs Services","1","0","Validate Duplicate Manifest API","0"
