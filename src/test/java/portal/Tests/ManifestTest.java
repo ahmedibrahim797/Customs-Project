@@ -1,6 +1,5 @@
 package portal.Tests;
 
-
 import Portal.Pages.CreateManifest;
 import Portal.Pages.components.NavigationBarComponent;
 import Portal.drivers.UITest;
@@ -18,6 +17,11 @@ import org.testng.annotations.Test;
 @UITest
 public class ManifestTest extends BaseTest {
 
+    // ─── Shared state: manifest number produced by this test ─────────────────
+    // static → لأن DeleteManifestTest محتاج يقرأها من class تاني
+    public static String lastCreatedManifestNumber;
+
+    // ─────────────────────────────────────────────────────────────────────────
 
     @Description("Create a new manifest with valid data")
     @Test(groups = "manifest", dependsOnGroups = "authentication")
@@ -31,9 +35,8 @@ public class ManifestTest extends BaseTest {
 
         driver.hardWait(4000); // wait for Flutter page transition
 
-        new CreateManifest(driver)
-                // ملء الفورم
-                //.refreshPageToLoadSemantics()
+        CreateManifest createManifest = new CreateManifest(driver);
+        createManifest
                 .openManifestTypeDropdown()
                 .selectManifestTypeImport()
                 .openArrivalPortDropdown()
@@ -67,16 +70,20 @@ public class ManifestTest extends BaseTest {
                 .enterNumberOfPassengers(testData.getJsonData("numberOfPassengers"))
                 .enterNotes(testData.getJsonData("notes"))
                 .clickOnNextButton()
-                .verifyManifestSuccessMessage()
-                .getGeneratedManifestNumber();
+                .verifyManifestSuccessMessage();
+
+        // حفظ الرقم في static field عشان DeleteManifestTest يقدر يستخدمه
+        lastCreatedManifestNumber = createManifest.getGeneratedManifestNumber();
     }
 
 
-    //Configurations
+    // ─── Configurations ──────────────────────────────────────────────────────
+
     @BeforeClass(alwaysRun = true)
     protected void preCondition() {
         testData = new JsonReader("manifest-data");
     }
+
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() {

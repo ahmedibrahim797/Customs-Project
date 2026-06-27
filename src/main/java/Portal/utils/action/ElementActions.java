@@ -186,6 +186,62 @@ public class ElementActions {
         return this;
     }
 
+    /**
+     * typeInFlutterInput — حل مشكلة Flutter web حيث document.activeElement
+     * يرجع body أو flt-glass-pane بدل الـ input الحقيقي.
+     *
+     * الطريقة:
+     * 1. كليك JS على الـ semantic element لتنشيط Flutter
+     * 2. انتظر قليلاً عشان Flutter يفتح الـ hidden input
+     * 3. دور على أول input/textarea ظهر في الـ DOM وأكتب فيه
+     *
+     * استخدم دي بدل type() في حالة Flutter fields اللي بتعمل scroll بدل ما تكتب.
+     */
+    public ElementActions typeInFlutterInput(By locator, String text) {
+        waitManager.fluentWait().until(d -> {
+            try {
+                WebElement semanticElement = d.findElement(locator);
+                JavascriptExecutor js = (JavascriptExecutor) d;
+
+                // Step 1: انقر على الـ semantic element عشان Flutter يفتح الـ real input
+                js.executeScript("arguments[0].click();", semanticElement);
+                waitManager.hardWait(300); // انتظر Flutter يجهز الـ input
+
+                // Step 2: دور على الـ input الحقيقي اللي Flutter فتحه في الـ DOM
+                WebElement realInput = (WebElement) js.executeScript(
+                    "var inputs = document.querySelectorAll('input[type=text], input:not([type]), textarea');" +
+                    "for (var i = 0; i < inputs.length; i++) {" +
+                    "  var style = window.getComputedStyle(inputs[i]);" +
+                    "  if (style.display !== 'none' && style.visibility !== 'hidden' && inputs[i].offsetParent !== null) {" +
+                    "    return inputs[i];" +
+                    "  }" +
+                    "}" +
+                    "return document.activeElement;"
+                );
+
+                if (realInput == null
+                        || realInput.getTagName().equalsIgnoreCase("body")
+                        || realInput.getTagName().equalsIgnoreCase("flt-glass-pane")) {
+                    LogsManager.info("⏳ Flutter input not ready yet, retrying...");
+                    return false;
+                }
+
+                // Step 3: امسح واكتب
+                realInput.sendKeys(Keys.chord(Keys.CONTROL, "a"));
+                realInput.sendKeys(Keys.DELETE);
+                realInput.sendKeys(text);
+
+                LogsManager.info("✅ Typed '" + text + "' into Flutter input: " + locator);
+                return true;
+
+            } catch (Exception e) {
+                LogsManager.info("❌ typeInFlutterInput failed: " + e.getMessage());
+                return false;
+            }
+        });
+        return this;
+    }
+
     //hovering
     public ElementActions hover(By locator) {
         waitManager.fluentWait().until(d ->

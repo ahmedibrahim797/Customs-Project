@@ -261,7 +261,7 @@ public class CreateManifest {
     }
 
     @Step("Extract Manifest Number from success message")
-    public void getGeneratedManifestNumber() {
+    public String getGeneratedManifestNumber() {
         String fullMessage = getManifestSuccessMessage();
         // fullMessage = "رقم المنافيست الخاص بك هو : 600/2026/000131 - وارد"
 
@@ -272,8 +272,7 @@ public class CreateManifest {
 
         LogsManager.info("The Manifest Number is : " + numberPart);
 
-
-        // return numberPart;
+        return numberPart;
     }
 
     // validation

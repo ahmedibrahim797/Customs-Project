@@ -43,6 +43,7 @@
                     <dependency>
                         <groupId>org.aspectj</groupId>
                         <artifactId>aspectjweaver</artifactId>
+                        <version>1.9.25.1</version>
                     </dependency>
                 </dependencies>
             </plugin>
@@ -231,6 +232,13 @@
             <version>3.5.0</version>
             <scope>compile</scope>
         </dependency>
+        <!-- Source: https://mvnrepository.com/artifact/org.apache.maven.surefire/surefire-testng -->
+        <dependency>
+            <groupId>org.apache.maven.surefire</groupId>
+            <artifactId>surefire-testng</artifactId>
+            <version>3.5.6</version>
+            <scope>compile</scope>
+        </dependency>
         <!-- Source: https://mvnrepository.com/artifact/com.automation-remarks/video-recorder-testng -->
         <dependency>
             <groupId>com.automation-remarks</groupId>
@@ -279,6 +287,14 @@
             <groupId>org.jsoup</groupId>
             <artifactId>jsoup</artifactId>
             <version>1.22.2</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <!-- Source: https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
+        <dependency>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
+            <version>9.7.0</version>
             <scope>compile</scope>
         </dependency>
 
