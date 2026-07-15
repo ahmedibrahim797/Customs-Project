@@ -1,0 +1,23 @@
+{
+  "mainShipmentType": "مكنترة",
+  "secondShipmentType": "حاوية مشتركة",
+  "deliveryType": "تسليم مخزن",
+  "billOfLadingNumber": "9004001",
+  "billOfLadingDate": "30",
+  "policyFeeType": "برسم الوارد",
+  "destinationType": "port",
+  "dischargePort": " ميناء دمياط البحرى",
+  "destinationPortCountry": "سوريا",
+  "destinationPort": "Hama",
+  "transitPort": "بورسعيد",
+  "shippingPortCountry": "الجزائر",
+  "shippingPort": "اورن",
+  "acidIdNumber": "1515151532026070011",
+  "beneficiaryNumber": "151515133",
+  "exporterName": "شركة التصدير الدولية",
+  "notifyPartyName": "شركة الشحن والنقل",
+  "exporterDetails": "العنوان: شارع المصدرين، المبنى 5، الجزائر",
+  "notifyPartyDetails": "العنوان: شارع الموانئ، المبنى 10، القاهرة",
+  "beneficiaryDetails": "العنوان: شارع المستفيدين، المبنى 3، الأسكندرية",
+  "notes": "ملاحظات تجريبية لاختبار إنشاء بوليصة الشحن"
+}

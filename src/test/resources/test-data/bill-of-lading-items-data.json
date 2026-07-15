@@ -1,0 +1,11 @@
+{
+  "containerCode": "MSCU1234566",
+  "shippingSeal": "IMO-1234567",
+  "unitOfPackages": "قطعة",
+  "numberOfPackages": "50",
+  "grossWeight": "80",
+  "netWeight": "50",
+  "weightUnit": "كيلو جرام",
+  "hsCode": "600200",
+  "generalGoodsDescription": "أجهزة إلكترونية وملحقاتها"
+}

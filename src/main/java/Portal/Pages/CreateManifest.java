@@ -5,7 +5,6 @@ import Portal.drivers.GUIDriver;
 import Portal.utils.logs.LogsManager;
 import io.qameta.allure.Step;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 public class CreateManifest {
@@ -56,6 +55,10 @@ public class CreateManifest {
     private final By universalNextBTN = By.xpath("(//flt-semantics[@flt-semantics-identifier='next'])[last()]");
     // رسالة التحقق
     private final By successMessage = By.cssSelector("flt-semantics[flt-semantics-identifier*='رقم المنافيست الخاص بك هو']");
+    // قائمة البوالص
+    private final By billOfLadingList = By.xpath("(//flt-semantics[@flt-semantics-identifier='selectNow'])[2]");
+    // زر اضافة بوليصة
+    private final By billOfLadingBTN = By.cssSelector("flt-semantics[role=\"button\"][flt-semantics-identifier=\"add\"]");
 
 
     public NavigationBarComponent navigationBar;
@@ -108,11 +111,11 @@ public class CreateManifest {
         return this;
     }
 
-    // 1. الميثود المسؤولة عن كتابة النص في البحث فقط
+    // الميثود المسؤولة عن كتابة النص في البحث فقط
     @Step("Search for '{searchValue}' in the active dropdown")
     public CreateManifest searchInDropdown(String searchValue) {
         driver.hardWait(3000);
-        scrollElementToCenter(dropDownSearchTXT);
+        driver.element().scrollElementToCenter(dropDownSearchTXT);
         driver.element().type(dropDownSearchTXT, searchValue);
         return this;
     }
@@ -132,21 +135,21 @@ public class CreateManifest {
     @Step("Open Transportation dropdown (وسيلة النقل)")
     public CreateManifest openTransportationDropdown() {
         driver.hardWait(1000);
-        driver.element().click(transportationDropDownList);
+        driver.element().clickWithRetry(transportationDropDownList);
         return this;
     }
 
     @Step("Open Country Departure dropdown (دولة ميناء المغادرة)")
     public CreateManifest openCountryDepartureDropdown() {
         driver.hardWait(1000);
-        driver.element().click(countryDepartureDropDownList);
+        driver.element().clickWithRetry(countryDepartureDropDownList);
         return this;
     }
 
     @Step("Open Port Departure dropdown (ميناء المغادرة)")
     public CreateManifest openPortDepartureDropdown() {
         driver.hardWait(1000);
-        driver.element().click(portDepartureDropDownList);
+        driver.element().clickWithRetry(portDepartureDropDownList);
         return this;
     }
 
@@ -157,35 +160,19 @@ public class CreateManifest {
         return this;
     }
 
-    // 2. ميثود مساعدة (Private) تبني الـ Locator الديناميكي فقط ولا تقوم بأي Action
-    private By getDynamicPortLocator(String portName) {
-        String dynamicSelector = "flt-semantics[flt-semantics-identifier='drop_item_" + portName + "']";
-        LogsManager.info(dynamicSelector);
-        return By.cssSelector(dynamicSelector);
-    }
-
-    // 3. الميثود المسؤولة عن الضغط على الميناء
+    // الميثود المسؤولة عن الضغط على اي عنصر
     @Step("Select item '{itemName}' from dropdown results")
     public CreateManifest selectItemFromDropdown(String itemName) {
         driver.hardWait(2000);
-        driver.element().click(getDynamicPortLocator(itemName));
+        driver.element().click(driver.element().getDynamicItemLocator(itemName));
         return this;
     }
 
-    // 1. ميثود مساعدة (Private) لإنشاء محدد اليوم بشكل ديناميكي
-    private By getDynamicCalendarDayLocator(String dayNumber) {
-        // نستخدم starts-with للبحث عن (الرقم + فاصلة + مسافة)
-        // مثلاً: '20, ' ليختار اليوم 20 ويتجاهل أي 20 أخرى في السنة
-        String dynamicXPath = "//flt-semantics[starts-with(text(), '" + dayNumber + ", ')]";
-        LogsManager.info(dynamicXPath);
-        return By.xpath(dynamicXPath);
-    }
-
-    // 2. الميثود المسؤولة عن الضغط على اليوم المطلوب
+    // الميثود المسؤولة عن الضغط على اليوم المطلوب
     @Step("Select day {dayNumber} from the calendar")
     public CreateManifest selectDayFromCalendar(String dayNumber) {
         driver.hardWait(1000);
-        driver.element().click(getDynamicCalendarDayLocator(dayNumber));
+        driver.element().click(driver.element().getDynamicCalendarDayLocator(dayNumber));
         return this;
     }
 
@@ -301,23 +288,20 @@ public class CreateManifest {
         return this;
     }
 
-    @Step("Refresh page to force Flutter semantics tree to load")
-    public CreateManifest refreshPageToLoadSemantics() {
-        driver.hardWait(3000);
-        driver.get().navigate().refresh();
-        driver.hardWait(1000);
-        return this; // للحفاظ على الـ Fluent Design
+
+    @Step("Click on bill of lading list icon")
+    public CreateManifest clickOnBillOfLadingIcon() {
+        driver.element().click(billOfLadingList);
+        return this;
     }
 
-    public void scrollElementToCenter(By locator) {
-        WebElement element = driver.get().findElement(locator);
-        JavascriptExecutor js = (JavascriptExecutor) driver.get();
-        // هذه الخدعة تضع العنصر في منتصف الشاشة بدقة
-        js.executeScript("arguments[0].scrollIntoView({block: 'center', inline: 'nearest'});", element);
-
-        // انتظار بسيط جداً ليتمكن Flutter من رسم الطبقة الشفافة في المكان الجديد
-        driver.hardWait(300);
+    @Step("Click on bill of lading Button")
+    public CreateBillOfLading clickOnBillOfLadingBTN() {
+        driver.hardWait(4000);
+        driver.element().clickWithRetry(billOfLadingBTN);
+        return new CreateBillOfLading(driver);
     }
+
 }
 
 

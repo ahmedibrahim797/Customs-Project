@@ -5,7 +5,6 @@ import Portal.Pages.components.NavigationBarComponent;
 import Portal.drivers.UITest;
 import Portal.utils.dataReader.JsonReader;
 import io.qameta.allure.*;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
@@ -85,8 +84,4 @@ public class ManifestTest extends BaseTest {
     }
 
 
-    @AfterMethod(alwaysRun = true)
-    public void tearDown() {
-        driver.quitDriver();
-    }
 }
