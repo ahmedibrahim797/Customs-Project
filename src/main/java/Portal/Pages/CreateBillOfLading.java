@@ -17,8 +17,6 @@ public class CreateBillOfLading {
     private final By deliveryTypeDropdown = By.cssSelector("flt-semantics[flt-semantics-identifier='deliveryType'][role='group']");
     // رقم البوليصة
     private final By billOfLadingNumberTXT = By.cssSelector("input[aria-label*='رقم البوليصة']");
-    // البحث ف اي قائمة
-    private final By dropDownSearchTXT = By.xpath("(//input[@type='text' and contains(@aria-label, 'البحث حسب الاسم أو الكود')])[last()]");
     // تاريخ البوليصة
     private final By billOfLadingDateTXT = By.cssSelector("input[aria-label*='تاريخ البوليصة']");
     // حسنا
@@ -63,6 +61,8 @@ public class CreateBillOfLading {
     private final By saveBTN = By.xpath("(//flt-semantics[@flt-semantics-identifier='save'])[last()]");
     // البحث برقم البوليصة
     private final By billOfLadingNumberٍSearchTXT = By.cssSelector("input[aria-label*='رقم البوليصة']");
+    // الخروج
+    private final By exitBTN = By.xpath("(//flt-semantics[@role='button' and contains(text(), 'خروج')])[last()]");
 
     public NavigationBarComponent navigationBar;
     private GUIDriver driver;
@@ -102,20 +102,17 @@ public class CreateBillOfLading {
         return this;
     }
 
-    // الميثود المسؤولة عن كتابة النص في البحث فقط
+    // الميثود المسؤولة عن كتابة النص في البحث — مفوّضة لـ ElementActions
     @Step("Search for '{searchValue}' in the active dropdown")
     public CreateBillOfLading searchInDropdown(String searchValue) {
-        driver.hardWait(2000);
-        driver.element().scrollElementToCenter(dropDownSearchTXT);
-        driver.element().type(dropDownSearchTXT, searchValue);
+        driver.element().searchInDropdown(searchValue);
         return this;
     }
 
-    // الميثود المسؤولة عن الضغط على اي عنصر
+    // الميثود المسؤولة عن الضغط على اي عنصر — مفوّضة لـ ElementActions
     @Step("Select item '{itemName}' from dropdown results")
     public CreateBillOfLading selectItemFromDropdown(String itemName) {
-        driver.hardWait(2000);
-        driver.element().click(driver.element().getDynamicItemLocator(itemName));
+        driver.element().selectItemFromDropdown(itemName);
         return this;
     }
 
@@ -286,12 +283,15 @@ public class CreateBillOfLading {
         return this;
     }
 
-    // validation
-    @Step("Scroll down ~6 cm before checking 'أضف سطور' button")
-    public CreateBillOfLading scrollDownBeforeAddLines() {
-        driver.element().scrollDownByArrowKeys(6);
-        return this;
+    @Step("Click on 'الخروج' (Exit) button")
+    public editManifest clickOnExitButton() {
+        driver.element().click(exitBTN);
+        return new editManifest(driver);
     }
+
+
+    // validation
+
 
     @Step("Verify that 'أضف سطور' (Add Lines) button is visible")
     public CreateBillOfLading verifyAddLinesButtonIsVisible() {

@@ -45,6 +45,9 @@ public class TestNGListeners implements ISuiteListener, IExecutionListener, IInv
 
     public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
         if (method.isTestMethod()) {
+            // Mark the current log file position BEFORE the test writes anything,
+            // so attachLogs() can slice only this test's log lines later.
+            AllureAttachmentManager.markLogsStart();
             if (isUITest(testResult)) {
                 ScreenRecordManager.startRecording();
             }

@@ -13,8 +13,6 @@ public class CreateBillOfLadingItems {
     private final By shippingSealTXT = By.cssSelector("input[aria-label*='السيل الملاحي']");
     // وحدة الطرود
     private final By unitOfPackagesDropdown = By.cssSelector("flt-semantics[aria-label='وحدة الطرود'][role='group']");
-    // البحث ف اي قائمة
-    private final By dropDownSearchTXT = By.xpath("(//input[@type='text' and contains(@aria-label, 'البحث حسب الاسم أو الكود')])[last()]");
     // عدد الطرود
     private final By numberOfPackagesTXT = By.cssSelector("input[aria-label*='عدد الطرود']");
     // الوزن القائم
@@ -24,7 +22,7 @@ public class CreateBillOfLadingItems {
     // وحدة الوزن
     private final By weightUnitDropdown = By.cssSelector("flt-semantics[aria-label='وحدة الوزن'][role='group']");
     // hs code
-    private final By hsCodeTXT = By.cssSelector("input[aria-label*='رمز HS']");
+    private final By hsCodeTXT = By.cssSelector("input[aria-label*='HS']");
     // وصف عام البضاعة
     private final By generalGoodsDescriptionTextArea = By.cssSelector("textarea[aria-label*='وصف عام للبضائع']");
     // زر الحفظ
@@ -59,20 +57,17 @@ public class CreateBillOfLadingItems {
         return this;
     }
 
-    // الميثود المسؤولة عن كتابة النص في البحث فقط
+    // الميثود المسؤولة عن كتابة النص في البحث — مفوّضة لـ ElementActions
     @Step("Search for '{searchValue}' in the active dropdown")
     public CreateBillOfLadingItems searchInDropdown(String searchValue) {
-        driver.hardWait(3000);
-        driver.element().scrollElementToCenter(dropDownSearchTXT);
-        driver.element().type(dropDownSearchTXT, searchValue);
+        driver.element().searchInDropdown(searchValue);
         return this;
     }
 
-    // الميثود المسؤولة عن الضغط على اي عنصر
+    // الميثود المسؤولة عن الضغط على اي عنصر — مفوّضة لـ ElementActions
     @Step("Select item '{itemName}' from dropdown results")
     public CreateBillOfLadingItems selectItemFromDropdown(String itemName) {
-        driver.hardWait(2000);
-        driver.element().click(driver.element().getDynamicItemLocator(itemName));
+        driver.element().selectItemFromDropdown(itemName);
         return this;
     }
 

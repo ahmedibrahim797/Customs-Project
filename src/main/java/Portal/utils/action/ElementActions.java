@@ -12,15 +12,21 @@ import java.io.File;
 import java.time.Duration;
 
 public class ElementActions {
+    /**
+     * Locator مشترك لحقل البحث في أي قائمة منسدلة في التطبيق.
+     * يستخدمه searchInDropdown وselectItemFromDropdown بدلاً من تكراره في كل Page class.
+     */
+    private static final By DROPDOWN_SEARCH_TXT =
+            By.xpath("(//input[@type='text' and contains(@aria-label, 'البحث حسب الاسم أو الكود')])[last()]");
     private final WebDriver driver;
     private WaitManager waitManager;
+
+    //Clicking
 
     public ElementActions(WebDriver driver) {
         this.driver = driver;
         this.waitManager = new WaitManager(driver);
     }
-
-    //Clicking
 
     public ElementActions clickSelenium(By locator) {
         waitManager.fluentWait().until(d ->
@@ -122,7 +128,6 @@ public class ElementActions {
         return this;
     }
 
-
     public ElementActions clickNaturally(By locator) {
         waitManager.fluentWait().until(d -> {
             try {
@@ -154,32 +159,26 @@ public class ElementActions {
         return this;
     }
 
-    //Typing
-//    public ElementActions type(By locator, String text) throws InterruptedException {
-//        waitManager.fluentWait().until(d -> {
-//            try {
-//                System.out.println("start");
-//                WebElement element = d.findElement(locator);
-//                System.out.println(locator);
-//                scrollToElementJS(locator);
-//                System.out.println(locator + " scroll");
-//                element.click();
-//                System.out.println("click");
-//                element.sendKeys(Keys.CONTROL + "a");
-//                System.out.println("click Keys.CONTROL a");
-//                element.sendKeys(Keys.DELETE);
-//                System.out.println("click Keys.CONTROL delete");
-//                element.sendKeys(text);
-//                System.out.println("send text");
-//                LogsManager.info("Typed text '" + text + "' into element: " + locator);
-//                return true;
-//            } catch (Exception e) {
-//                System.out.println(e.getMessage());
-//                return false;
-//            }
-//        });
-//        return this;
-//    }
+    public ElementActions typeSelenium(By locator, String text) {
+        waitManager.fluentWait().until(d -> {
+            try {
+                System.out.println("start");
+                WebElement element = d.findElement(locator);
+                scrollToElementJS(locator);
+                element.click();
+                element.sendKeys(Keys.CONTROL + "a");
+                element.sendKeys(Keys.DELETE);
+                element.sendKeys(text);
+                LogsManager.info("Typed text '" + text + "' into element: " + locator);
+                return true;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+                return false;
+            }
+        });
+        return this;
+    }
+
     public ElementActions type(By locator, String text) {
         final int[] failedAttempts = {0};
 
@@ -230,12 +229,12 @@ public class ElementActions {
     /**
      * typeInFlutterInput — حل مشكلة Flutter web حيث document.activeElement
      * يرجع body أو flt-glass-pane بدل الـ input الحقيقي.
-     *
+     * <p>
      * الطريقة:
      * 1. كليك JS على الـ semantic element لتنشيط Flutter
      * 2. انتظر قليلاً عشان Flutter يفتح الـ hidden input
      * 3. دور على أول input/textarea ظهر في الـ DOM وأكتب فيه
-     *
+     * <p>
      * استخدم دي بدل type() في حالة Flutter fields اللي بتعمل scroll بدل ما تكتب.
      */
     public ElementActions typeInFlutterInput(By locator, String text) {
@@ -250,14 +249,14 @@ public class ElementActions {
 
                 // Step 2: دور على الـ input الحقيقي اللي Flutter فتحه في الـ DOM
                 WebElement realInput = (WebElement) js.executeScript(
-                    "var inputs = document.querySelectorAll('input[type=text], input:not([type]), textarea');" +
-                    "for (var i = 0; i < inputs.length; i++) {" +
-                    "  var style = window.getComputedStyle(inputs[i]);" +
-                    "  if (style.display !== 'none' && style.visibility !== 'hidden' && inputs[i].offsetParent !== null) {" +
-                    "    return inputs[i];" +
-                    "  }" +
-                    "}" +
-                    "return document.activeElement;"
+                        "var inputs = document.querySelectorAll('input[type=text], input:not([type]), textarea');" +
+                                "for (var i = 0; i < inputs.length; i++) {" +
+                                "  var style = window.getComputedStyle(inputs[i]);" +
+                                "  if (style.display !== 'none' && style.visibility !== 'hidden' && inputs[i].offsetParent !== null) {" +
+                                "    return inputs[i];" +
+                                "  }" +
+                                "}" +
+                                "return document.activeElement;"
                 );
 
                 if (realInput == null
@@ -388,7 +387,6 @@ public class ElementActions {
         return this;
     }
 
-
     //find an element
     public WebElement findElement(By locator) {
         return driver.findElement(locator);
@@ -400,6 +398,8 @@ public class ElementActions {
                 .executeScript(""" 
                         arguments[0].scrollIntoView({behaviour:"auto",block:"center",inline:"center"});""", findElement(locator));
     }
+
+    // ==================== Shared Dropdown Actions ====================
 
     //select from dropdown
     public ElementActions selectFromDropdown(By locator, String value) {
@@ -420,13 +420,41 @@ public class ElementActions {
         return this;
     }
 
+    /**
+     * يكتب نص البحث في حقل البحث الخاص بأي قائمة منسدلة مفتوحة.
+     * يمرر العنصر للمنتصف أولاً ثم يكتب القيمة.
+     *
+     * @param searchValue القيمة المراد البحث عنها
+     * @return this للاستخدام في method chaining
+     */
+    @io.qameta.allure.Step("Search for '{searchValue}' in the active dropdown")
+    public ElementActions searchInDropdown(String searchValue) {
+        new WaitManager(driver).hardWait(2000);
+        scrollElementToCenter(DROPDOWN_SEARCH_TXT);
+        type(DROPDOWN_SEARCH_TXT, searchValue);
+        return this;
+    }
+
+    /**
+     * يضغط على العنصر المطلوب في نتائج أي قائمة منسدلة بعد البحث.
+     *
+     * @param itemName اسم أو identifier العنصر المراد الضغط عليه
+     * @return this للاستخدام في method chaining
+     */
+    @io.qameta.allure.Step("Select item '{itemName}' from dropdown results")
+    public ElementActions selectItemFromDropdown(String itemName) {
+        new WaitManager(driver).hardWait(2000);
+        click(getDynamicItemLocator(itemName));
+        return this;
+    }
+
     // ==================== Dynamic Locator Builders ====================
 
     /**
      * يبني CSS Selector ديناميكي لأي عنصر في القوائم المنسدلة (dropdown items).
      * يُستخدم في أي Page class يحتاج الضغط على نتيجة بعد البحث.
      *
-     * @param itemIdentifier  الـ identifier الخاص بالعنصر المطلوب (مثل: اسم الميناء أو أي قيمة)
+     * @param itemIdentifier الـ identifier الخاص بالعنصر المطلوب (مثل: اسم الميناء أو أي قيمة)
      * @return By locator جاهز للاستخدام
      */
     public By getDynamicItemLocator(String itemIdentifier) {
@@ -452,7 +480,7 @@ public class ElementActions {
      * تمرر العنصر إلى منتصف الشاشة بدقة باستخدام JavaScript.
      * مفيدة مع تطبيقات Flutter Web التي تحتاج العنصر في المركز قبل التفاعل معه.
      *
-     * @param locator  محدد العنصر المراد تمريره للمركز
+     * @param locator محدد العنصر المراد تمريره للمركز
      */
     public void scrollElementToCenter(By locator) {
         WebElement element = driver.findElement(locator);

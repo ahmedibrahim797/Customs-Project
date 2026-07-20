@@ -1,0 +1,24 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Admin Suite - Login - Manifest Actual Arrival Date" verbose="1">
+
+    <!--
+        ترتيب التنفيذ:
+        1. validLoginAdminTC         (group: authenticationAdmin)
+             ↓
+        2. updateActualArrivalDateTC (group: manifestActualArrival)
+    -->
+    <test name="Admin Login and Manifest Actual Arrival Date Flow">
+        <groups>
+            <run>
+                <include name="authenticationAdmin"/>
+                <include name="manifestActualArrival"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="admin.Tests.LoginTest"/>
+            <class name="admin.Tests.ManifestActualArrivalDateTest"/>
+        </classes>
+    </test>
+
+</suite>

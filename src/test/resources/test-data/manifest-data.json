@@ -1,6 +1,6 @@
 {
   "arrivalPort": "الأسكندرية",
-  "vesselNumber": "68000173",
+  "vesselNumber": "68000185",
   "transportation": "VENTO DI BORA",
   "countryDeparture": "الجزائر",
   "portDeparture": "اورن",
@@ -10,5 +10,6 @@
   "voyageNumber": "701",
   "mainWarehouse": "ساحة قسم سابع",
   "numberOfPassengers": "10",
-  "notes": "ملاحظات تجريبية لاختبار إنشاء المنافيست"
+  "notes": "ملاحظات تجريبية لاختبار إنشاء المنافيست",
+  "trakiPier": "رصيف رقم1"
 }

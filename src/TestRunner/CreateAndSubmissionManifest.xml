@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="Bill of Lading Full Flow" verbose="1">
+<suite name="Create and submission manifest end to end scenario" verbose="1">
 
     <!--
         ترتيب التنفيذ المضمون:
@@ -13,8 +13,14 @@
         createBillOfLadingItemsTC (bill-of-lading-items)
             ↓
         saveBillOfLadingTC (save-bl)
+            ↓
+        verifyBillOfLadingAciDataTC (BillOfLadingFlow)
+            ↓
+        editManifestTC (edit-manifest)
+            ↓
+        submitManifestTC → assertManifestSubmissionDateIsNotNull (submit-manifest)
     -->
-    <test name="Bill of Lading Creation Flow">
+    <test name="Create and submission manifest end to end scenario">
         <groups>
             <run>
                 <include name="authentication"/>
@@ -22,6 +28,9 @@
                 <include name="fill-bl"/>
                 <include name="bill-of-lading-items"/>
                 <include name="save-bl"/>
+                <include name="BillOfLadingFlow"/>
+                <include name="edit-manifest"/>
+                <include name="submit-manifest"/>
             </run>
         </groups>
         <classes>
@@ -29,6 +38,8 @@
             <class name="portal.Tests.ManifestTest"/>
             <class name="portal.Tests.CreateBillOfLadingTest"/>
             <class name="portal.Tests.CreateBillOfLadingItemsTest"/>
+            <class name="portal.Tests.EditManifestTest"/>
+            <class name="portal.Tests.SubmissionManifestTest"/>
         </classes>
     </test>
 

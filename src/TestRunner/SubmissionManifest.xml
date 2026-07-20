@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="Manifest Submission - Full Cycle" verbose="1">
+
+    <!-- Login → Create Manifest -->
+    <test name="Manifest Submission Flow">
+        <groups>
+            <run>
+                <include name="authentication"/>
+                <include name="submit-manifest"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="portal.Tests.LoginTest"/>
+            <class name="portal.Tests.SubmissionManifestTest"/>
+        </classes>
+    </test>
+
+</suite>

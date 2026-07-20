@@ -21,8 +21,6 @@ public class CreateManifest {
     private final By manifestImportBTN = By.cssSelector("flt-semantics[flt-semantics-identifier='drop_item_incoming']");
     // ميناء الوصول
     private final By arrivalPortDropDownList = By.cssSelector("flt-semantics[flt-semantics-identifier='arrivalPort'][role='group']");
-    // البحث عن في اي قائمة منسدلة
-    private final By dropDownSearchTXT = By.xpath("(//input[@type='text' and contains(@aria-label, 'البحث حسب الاسم أو الكود')])[last()]");
     // رقم التراكي
     private final By vesselNumberTXT = By.cssSelector("input[type='text'][aria-label*='رقم التراكي']");
     // عرض بيانات المنافيست
@@ -71,23 +69,6 @@ public class CreateManifest {
 
     // ==================== Methods for Navigation Steps ====================
 
-    @Step("Click on Manifest card")
-    public CreateManifest clickOnManifestCard() {
-        driver.element().click(manifestCardBTN);
-        return this;
-    }
-
-    @Step("Click on Manifest Service button")
-    public CreateManifest clickOnManifestService() {
-        driver.element().click(manifestServiceBTN);
-        return this;
-    }
-
-    @Step("Click on Manual Manifest insertion button")
-    public CreateManifest clickOnManualManifest() {
-        driver.element().click(manualManifestBTN);
-        return this;
-    }
 
     // ==================== Methods for Manifest Form ====================
 
@@ -111,12 +92,10 @@ public class CreateManifest {
         return this;
     }
 
-    // الميثود المسؤولة عن كتابة النص في البحث فقط
+    // الميثود المسؤولة عن كتابة النص في البحث — مفوّضة لـ ElementActions
     @Step("Search for '{searchValue}' in the active dropdown")
     public CreateManifest searchInDropdown(String searchValue) {
-        driver.hardWait(3000);
-        driver.element().scrollElementToCenter(dropDownSearchTXT);
-        driver.element().type(dropDownSearchTXT, searchValue);
+        driver.element().searchInDropdown(searchValue);
         return this;
     }
 
@@ -160,11 +139,10 @@ public class CreateManifest {
         return this;
     }
 
-    // الميثود المسؤولة عن الضغط على اي عنصر
+    // الميثود المسؤولة عن الضغط على اي عنصر — مفوّضة لـ ElementActions
     @Step("Select item '{itemName}' from dropdown results")
     public CreateManifest selectItemFromDropdown(String itemName) {
-        driver.hardWait(2000);
-        driver.element().click(driver.element().getDynamicItemLocator(itemName));
+        driver.element().selectItemFromDropdown(itemName);
         return this;
     }
 

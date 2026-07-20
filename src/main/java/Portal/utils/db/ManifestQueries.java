@@ -4,7 +4,9 @@ import Portal.utils.logs.LogsManager;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * ManifestQueries — Database query layer for the 'manifests' table.
@@ -99,6 +101,79 @@ public class ManifestQueries {
     }
 
     /**
+     * Returns the UUID (char 36) id of a manifest by its manifest_number.
+     * Useful when the PK is stored as a UUID string (not numeric).
+     *
+     * @param manifestNumber  e.g. "600/2026/000131"
+     * @return UUID string, or null if not found
+     */
+    public String getManifestUUID(String manifestNumber) {
+        String sql = "SELECT id FROM manifests WHERE manifest_number = ?";
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setString(1, manifestNumber);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                String uuid = rs.getString("id");
+                LogsManager.info("🔑 manifest UUID for [" + manifestNumber + "]:", uuid);
+                return uuid;
+            }
+        } catch (SQLException e) {
+            LogsManager.error("❌ getManifestUUID failed for:", manifestNumber, e.getMessage());
+        }
+        return null;
+    }
+
+    // ─────────────────────────────────────────────────────────────────────────
+    // manifest_bill_of_ladings Queries
+    // ─────────────────────────────────────────────────────────────────────────
+
+    /**
+     * Searches the manifest_bill_of_ladings table by manifest_id (UUID) and bill_number.
+     * Returns a map containing all columns of the matched row, or an empty map if not found.
+     *
+     * Key columns checked by the caller:
+     *   - acid_number
+     *   - aci_request_id
+     *
+     * @param manifestId  UUID of the manifest (from manifests.id)
+     * @param billNumber  the bill_number used when creating the bill of lading
+     * @return Map of column name → value (Strings), empty if not found
+     */
+    public Map<String, String> getBillOfLadingByManifestIdAndBillNumber(
+            String manifestId, String billNumber) {
+
+        Map<String, String> row = new HashMap<>();
+        String sql = "SELECT * FROM manifest_bill_of_ladings "
+                + "WHERE manifest_id = ? AND bill_number = ? "
+                + "LIMIT 1";
+
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setString(1, manifestId);
+            stmt.setString(2, billNumber);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                ResultSetMetaData meta = rs.getMetaData();
+                for (int i = 1; i <= meta.getColumnCount(); i++) {
+                    String colName  = meta.getColumnName(i);
+                    String colValue = rs.getString(i);
+                    row.put(colName, colValue);
+                }
+                LogsManager.info(
+                        "✅ manifest_bill_of_ladings row found for manifest_id:",
+                        manifestId + " | bill_number: " + billNumber);
+            } else {
+                LogsManager.info(
+                        "⚠️  No row found in manifest_bill_of_ladings for manifest_id:",
+                        manifestId + " | bill_number: " + billNumber);
+            }
+        } catch (SQLException e) {
+            LogsManager.error("❌ getBillOfLadingByManifestIdAndBillNumber failed:", e.getMessage());
+        }
+        return row;
+    }
+
+    /**
      * Returns manifest_number values that were created (not yet soft-deleted).
      * "Created" = rows where deleted_at IS NULL.
      * @return list of manifest_number strings
@@ -137,6 +212,33 @@ public class ManifestQueries {
             LogsManager.error("❌ getManifestsByStatusId failed:", e.getMessage());
         }
         return numbers;
+    }
+
+    /**
+     * Returns the manifest_submission_date (timestamp) for the given manifest_number.
+     * Returns null if the manifest is not found or the submission date has not been set yet.
+     *
+     * Use in DB assertion tests to verify that submitting a manifest actually
+     * populates this column (i.e. it is no longer NULL after submission).
+     *
+     * @param manifestNumber  e.g. "201/2026/000102"
+     * @return Timestamp of submission, or null if not found / not yet submitted
+     */
+    public java.sql.Timestamp getManifestSubmissionDate(String manifestNumber) {
+        String sql = "SELECT manifest_submission_date FROM manifests WHERE manifest_number = ?";
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setString(1, manifestNumber);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                java.sql.Timestamp submissionDate = rs.getTimestamp("manifest_submission_date");
+                LogsManager.info("📅 manifest_submission_date for [" + manifestNumber + "]: "
+                        + (submissionDate != null ? submissionDate.toString() : "NULL"));
+                return submissionDate;
+            }
+        } catch (SQLException e) {
+            LogsManager.error("❌ getManifestSubmissionDate failed for:", manifestNumber, e.getMessage());
+        }
+        return null;
     }
 
     // ─────────────────────────────────────────────────────────────────────────

@@ -7,7 +7,7 @@ import io.qameta.allure.*;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 
-@Epic("Customs Project")
+@Epic("Manifest")
 @Feature("Customs Services")
 @Story("Create Bill of Lading Items")
 @Severity(SeverityLevel.CRITICAL)
