@@ -77,7 +77,7 @@ public class ChromeFactory extends AbstractDriver {
         } else if (PropertyReader.getProperty("executionType").equalsIgnoreCase("Remote")) {
             try {
                 return new RemoteWebDriver(
-                        new URI("http://" + remoteHost + ":" + remotePort + "/wd/hub").toURL(), getOptions()
+                        new URI("http://" + remoteHost + ":" + remotePort).toURL(), getOptions()
                 );
             } catch (Exception e) {
                 LogsManager.error("Error creating RemoteWebDriver: " + e.getMessage());

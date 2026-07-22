@@ -1,4 +1,4 @@
-﻿# ============================================================
+# ============================================================
 #  GitLab CI/CD Pipeline - Customs Portal Automation Suite
 #  Triggers: push to main / master
 #  Runner:   GitLab Shared Runners (Docker)
@@ -7,7 +7,7 @@
 # ============================================================
 
 # Global image - Maven + Java
-image: maven:3.9-eclipse-temurin-21
+image: maven:3.9-eclipse-temurin-26
 
 # Pipeline triggers - only main/master
 workflow:
@@ -32,7 +32,7 @@ stages:
 variables:
   MAVEN_OPTS: "-Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository -Xmx1024m"
   MAVEN_CLI_OPTS: "--batch-mode --errors --fail-at-end"
-  SUITE_FILE: "src/TestRunner/Groups.xml"
+  SUITE_FILE: "src/TestRunner/CreateAndSubmissionManifest.xml"
 
 # ============================================================
 #  STAGE 1 - BUILD
@@ -55,7 +55,7 @@ compile:
 run-tests:
   stage: test
   image: selenium/standalone-chrome:latest
-  entrypoint: [""]
+  entrypoint: [ "" ]
   before_script:
     - echo "Installing Java and Maven inside Selenium image..."
     - apt-get update -qq && apt-get install -y -qq openjdk-21-jdk maven > /dev/null
@@ -70,8 +70,7 @@ run-tests:
     - |
       mvn $MAVEN_CLI_OPTS test \
         -DsuiteXmlFile="$SUITE_FILE" \
-        -Dwebdriver.chrome.driver=$(which chromedriver) \
-        -Dheadless=true \
+        -DexecutionType=Remote \
         -Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository
   after_script:
     - echo "Test run completed. Collecting artifacts..."
@@ -79,10 +78,10 @@ run-tests:
     when: always
     paths:
       - test-output/
-      - target/surefire-reports/
-      - allure-results/
+      - test-output/target/surefire-reports/
+      - test-output/allure-results/
     reports:
-      junit: target/surefire-reports/TEST-*.xml
+      junit: test-output/target/surefire-reports/TEST-*.xml
     expire_in: 7 days
   allow_failure: false
 
