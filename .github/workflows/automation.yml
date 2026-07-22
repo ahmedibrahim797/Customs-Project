@@ -10,7 +10,7 @@ name: Customs Portal - Automation Suite
 
 on:
   push:
-    branches: [main, master]
+    branches: [ main, master ]
   workflow_dispatch:   # يخليك تشغله يدوي من GitHub UI
 
 jobs:
@@ -21,7 +21,7 @@ jobs:
   # ============================================================
   compile:
     name: 🔨 Build & Compile
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -43,7 +43,7 @@ jobs:
   run-tests:
     name: 🧪 Run Tests
     needs: compile
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
@@ -80,7 +80,7 @@ jobs:
     name: 📊 Generate Allure Report
     needs: run-tests
     if: always()   # بيشتغل حتى لو الـ tests فشلت
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
       - name: Checkout Code
         uses: actions/checkout@v4
