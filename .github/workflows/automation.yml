@@ -1,0 +1,110 @@
+# ============================================================
+#  GitHub Actions Pipeline - Customs Portal Automation Suite
+#  Triggers: push to main / master
+#  Runner:   ubuntu-latest
+#  Browser:  Chrome via Selenium Grid
+#  Suite:    src/TestRunner/CreateAndSubmissionManifest.xml
+# ============================================================
+
+name: Customs Portal - Automation Suite
+
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:   # يخليك تشغله يدوي من GitHub UI
+
+jobs:
+
+  # ============================================================
+  #  JOB 1 - BUILD
+  #  Compile the project and make sure there are no build errors
+  # ============================================================
+  compile:
+    name: 🔨 Build & Compile
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Java 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Compile Project
+        run: mvn --batch-mode --errors compile -DskipTests
+
+  # ============================================================
+  #  JOB 2 - TEST
+  #  Run TestNG suite via Selenium Grid
+  # ============================================================
+  run-tests:
+    name: 🧪 Run Tests
+    needs: compile
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Java 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Run TestNG Suite
+        run: |
+          mvn --batch-mode --errors --fail-at-end test \
+            -DsuiteXmlFile="src/TestRunner/CreateAndSubmissionManifest.xml" \
+            -DexecutionType=Remote
+
+      - name: Upload Test Results
+        if: always()   # بيرفع الـ results حتى لو الـ tests فشلت
+        uses: actions/upload-artifact@v4
+        with:
+          name: automation-test-results
+          path: |
+            test-output/
+            test-output/target/surefire-reports/
+            test-output/allure-results/
+          retention-days: 7
+
+  # ============================================================
+  #  JOB 3 - REPORT
+  #  Generate Allure HTML Report
+  # ============================================================
+  generate-report:
+    name: 📊 Generate Allure Report
+    needs: run-tests
+    if: always()   # بيشتغل حتى لو الـ tests فشلت
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Java 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Download Test Results
+        uses: actions/download-artifact@v4
+        with:
+          name: automation-test-results   # لازم يطابق اسم الـ upload فوق
+
+      - name: Generate Allure Report
+        run: |
+          mvn --batch-mode allure:report
+          echo "Allure report generated successfully"
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-report
+          path: allure-report/
+          retention-days: 30
