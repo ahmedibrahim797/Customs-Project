@@ -26,7 +26,7 @@ public class ChromeFactory extends AbstractDriver {
         options.addArguments("--start-maximized");
         Map<String, Object> prefs = new HashMap<>();
         String userDir = System.getProperty("user.dir");
-        String downloadPath = userDir + "\\src\\test\\resources\\downloads";
+        String downloadPath = userDir + java.io.File.separator + "src" + java.io.File.separator + "test" + java.io.File.separator + "resources" + java.io.File.separator + "downloads";
         prefs.put("profile.default_content_settings.popups", 0);
         prefs.put("download.prompt_for_download", false);
         prefs.put("download.default_directory", downloadPath);
@@ -38,7 +38,8 @@ public class ChromeFactory extends AbstractDriver {
         options.setUnhandledPromptBehaviour(UnexpectedAlertBehaviour.IGNORE);
         options.setCapability(CapabilityType.ACCEPT_INSECURE_CERTS, true);
         options.setCapability(CapabilityType.UNHANDLED_PROMPT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
-        options.setCapability(CapabilityType.ENABLE_DOWNLOADS, true);
+        // ENABLE_DOWNLOADS requires Grid to be started with --enable-managed-downloads flag
+        // options.setCapability(CapabilityType.ENABLE_DOWNLOADS, true);
         options.setAcceptInsecureCerts(true);
         //options.addExtensions(haramBlurExtension);
         switch (PropertyReader.getProperty("executionType")) {
