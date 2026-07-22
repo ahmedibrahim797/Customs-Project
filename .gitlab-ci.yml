@@ -69,7 +69,8 @@ run-tests:
     - echo "Running TestNG suite - $SUITE_FILE"
     - |
       mvn $MAVEN_CLI_OPTS test \
-        -DsuiteXmlFile="$SUITE_FILE" \
+        -PFullCycle \
+        -Dsuit.group="$SUITE_FILE" \
         -DexecutionType=Remote \
         -Dmaven.repo.local=$CI_PROJECT_DIR/.m2/repository
   after_script:
