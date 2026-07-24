@@ -64,6 +64,14 @@ public class ChromeFactory extends AbstractDriver {
                 options.addArguments("--window-size=1920,1080");
                 options.addArguments("--no-sandbox");
                 options.addArguments("--disable-dev-shm-usage");
+                // ── Flutter Web يحتاج software rendering على Grid nodes (مفيش GPU) ──
+                // بدونه Flutter مش بيولّد الـ flt-semantics tree خالص
+                options.addArguments("--use-gl=swiftshader");
+                options.addArguments("--disable-software-rasterizer");
+                // ── Flutter Web Accessibility Tree ────────────────────────────────
+                // بيجبر Chrome يولّد الـ accessibility tree في headless mode
+                // بدونه flt-semantics elements مش بتظهر لـ Selenium على الـ Grid
+                options.addArguments("--force-renderer-accessibility");
             }
         }
         options.setPageLoadStrategy(PageLoadStrategy.EAGER);
